@@ -1,0 +1,1896 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex, nofollow"><link rel="icon" href="icono.svg" type="image/svg+xml"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Misterios de Tudela</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,600;1,400&family=Alegreya+Sans:wght@400;500;700&family=Alegreya+Sans+SC:wght@500;700&family=Grenze+Gotisch:wght@500&family=Noto+Serif+Hebrew:wght@500&display=swap">
+<style>
+:root{
+  color-scheme:dark;
+  --pizarra:#242C2F;
+  --pizarra-2:#2D373B;
+  --pizarra-3:#3C484D;
+  --linea:#5A6870;
+  --tiza:#E8E3D5;
+  --tiza-2:#B6BCB6;
+  --tiza-3:#8D9793;
+  --rio:#2E4B52;
+  --rio-linea:#4E7880;
+  --rio-texto:#8DB0B7;
+  --farol:#E6A63E;
+  --farol-tenue:rgba(230,166,62,.22);
+  --vino:#8E2C40;
+  --vino-vivo:#DB7A8C;
+  --vino-velo:rgba(142,44,64,.08);
+  --papel:#ECE5D4;
+  --tinta:#2A241F;
+  --tinta-2:#5C5046;
+  --ok:#8CC39A;
+  --f-display:"Grenze Gotisch", Georgia, "Times New Roman", serif;
+  --f-texto:"Alegreya", Georgia, "Times New Roman", serif;
+  --f-ui:"Alegreya Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --f-sc:"Alegreya Sans SC", "Alegreya Sans", system-ui, sans-serif;
+  --barra:64px;
+}
+*{box-sizing:border-box}
+[hidden]{display:none !important}
+html{background:var(--pizarra)}
+body{background:var(--pizarra); color:var(--tiza); font-family:var(--f-ui); font-size:16px; line-height:1.45; -webkit-font-smoothing:antialiased}
+h1,h2,h3{margin:0; text-wrap:balance}
+p{margin:0}
+button{font:inherit; color:inherit; cursor:pointer}
+:focus-visible{outline:2px solid var(--farol); outline-offset:2px}
+
+.app{max-width:560px; margin-inline:auto; padding-inline:16px; padding-block:12px 40px}
+.app.con-barra{padding-block:0 calc(var(--barra) + 36px + env(safe-area-inset-bottom, 0px))}
+
+.kicker{font-family:var(--f-sc); font-weight:700; font-size:13px; letter-spacing:.08em; color:var(--farol)}
+.display{font-family:var(--f-display); font-weight:500; line-height:1.02; letter-spacing:.005em}
+.ayuda{color:var(--tiza-2); font-size:15px}
+
+.btn{display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:46px; padding:10px 18px; border-radius:4px; border:1px solid var(--linea); background:transparent; color:var(--tiza); font-family:var(--f-ui); font-weight:700; font-size:16px; text-align:center}
+.btn-prim{background:var(--farol); border-color:var(--farol); color:#1E1A14}
+.btn-vino{background:var(--vino); border-color:var(--vino); color:#F7ECEE}
+.btn-mini{min-height:36px; padding:6px 12px; font-size:14px}
+.enlace{background:none; border:0; padding:6px 2px; color:var(--tiza-2); text-decoration:underline; text-underline-offset:3px; font-size:15px}
+.chip{display:inline-block; font-family:var(--f-sc); font-weight:700; font-size:12px; letter-spacing:.06em; padding:2px 9px; border-radius:999px; border:1px solid currentColor; color:var(--tiza-2)}
+.chip-ok{color:var(--ok)}
+.fila{display:flex; flex-wrap:wrap; gap:10px; align-items:center}
+
+/* Menú */
+.menu-cab{display:grid; gap:12px; padding-block:28px 26px}
+.menu-cab h1{font-size:clamp(46px, 13vw, 68px)}
+.menu-cab .sub{color:var(--tiza-2); max-width:38ch; font-size:17px}
+.casos{display:grid; gap:14px}
+.caso{display:grid; gap:10px; padding:18px; border:1px solid var(--pizarra-3); border-radius:6px; background:var(--pizarra-2)}
+.caso h2{font-family:var(--f-display); font-weight:500; font-size:32px; line-height:1.05}
+.caso .resumen{font-family:var(--f-texto); font-size:17px; color:var(--tiza-2); max-width:44ch}
+.caso.bloq{background:transparent; border-style:dashed; color:var(--tiza-3)}
+.caso.bloq h2{font-size:24px}
+.meta{font-family:var(--f-sc); font-weight:700; font-size:13px; letter-spacing:.07em; color:var(--tiza-2)}
+.entre{justify-content:space-between}
+.confirmar{display:grid; gap:10px; padding:12px; border:1px solid var(--vino-vivo); border-radius:4px}
+.nota-pie{margin-top:26px; color:var(--tiza-3); font-size:14px; max-width:48ch}
+.modo{display:flex; gap:12px; align-items:flex-start; margin-top:16px; padding:12px 14px; border:1px dashed var(--linea); border-radius:6px; color:var(--tiza-2); font-size:15px; cursor:pointer}
+.modo input{width:20px; height:20px; margin:1px 0 0; flex:none; accent-color:var(--farol)}
+.modo strong{color:var(--tiza)}
+
+/* Arranque */
+.intro{min-height:72vh; display:grid; align-content:center; gap:18px; padding-block:28px}
+.intro h1{font-size:clamp(40px, 11vw, 56px)}
+.intro .texto{display:grid; gap:14px; font-family:var(--f-texto); font-size:19px; line-height:1.55; max-width:36em}
+.intro .glosa{font-style:italic; font-size:16px; color:var(--tiza-2)}
+.campo{display:grid; gap:6px}
+.campo label, .etq-campo{font-family:var(--f-sc); font-weight:700; font-size:13px; letter-spacing:.07em; color:var(--tiza-2)}
+input[type=text]{width:100%; min-height:46px; padding:10px 12px; border-radius:4px; border:1px solid var(--linea); background:var(--pizarra-2); color:var(--tiza); font:inherit; font-size:17px}
+.oficios{display:flex; flex-wrap:wrap; gap:8px}
+.oficios label{position:relative}
+.oficios input{position:absolute; opacity:0; pointer-events:none}
+.oficios span{display:inline-block; padding:9px 14px; border:1px solid var(--linea); border-radius:999px; font-size:15px; cursor:pointer}
+.oficios input:checked + span{background:var(--farol); border-color:var(--farol); color:#1E1A14; font-weight:700}
+.oficios input:focus-visible + span{outline:2px solid var(--farol); outline-offset:2px}
+
+/* Barra superior del juego */
+.tope{position:sticky; top:env(safe-area-inset-top, 0px); z-index:5; display:flex; align-items:center; gap:12px; margin-inline:-16px; padding:10px 16px; background:var(--pizarra); border-bottom:1px solid var(--pizarra-3)}
+.caso-nom{flex:1; min-width:0; text-align:center; font-family:var(--f-display); font-size:21px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+.monedas{display:inline-flex; gap:6px; align-items:center; white-space:nowrap}
+.moneda{width:20px; height:20px; display:block}
+.m-llena{fill:var(--farol); stroke:#9C6B1E; stroke-width:1}
+.m-anillo{fill:none; stroke:#9C6B1E; stroke-width:1.2}
+.m-vacia{fill:none; stroke:var(--tiza-3); stroke-width:1.2; stroke-dasharray:2 2}
+.m-num{font-weight:700; font-size:17px; font-variant-numeric:tabular-nums}
+.m-txt{font-family:var(--f-sc); font-weight:700; font-size:12px; letter-spacing:.05em; color:var(--tiza-2)}
+
+.vista-cab{display:grid; gap:6px; padding-block:18px 14px}
+.vista-cab h2{font-family:var(--f-display); font-weight:500; font-size:36px; line-height:1.04}
+
+/* Plano */
+.nuevos{display:grid; gap:8px; margin-bottom:14px}
+.nuevos .fila{gap:8px}
+.chip-lugar{display:inline-flex; align-items:center; gap:7px; min-height:34px; padding:4px 12px; border:1px solid var(--farol); border-radius:999px; background:var(--farol-tenue); color:var(--tiza); font-family:var(--f-ui); font-weight:500; font-size:14px}
+.chip-lugar .punto-chip{width:8px; height:8px; border-radius:50%; background:var(--farol)}
+.plano-caja{border:1px solid var(--pizarra-3); border-radius:6px; background:var(--pizarra); overflow:hidden}
+.plano{display:block; width:100%; height:auto}
+.pie-plano{margin-top:8px; font-size:13px; font-style:italic; color:var(--tiza-3)}
+.plano text{font-family:var(--f-ui)}
+.rio{fill:var(--rio)}
+.ola{fill:none; stroke:var(--rio-linea); stroke-width:1.3; stroke-linecap:round}
+.puente{fill:var(--pizarra-3); stroke:var(--tiza-2); stroke-width:1}
+.torrecita{fill:var(--pizarra-2); stroke:var(--tiza-2); stroke-width:1.2}
+.muralla{fill:none; stroke:var(--tiza-3); stroke-width:1.4; stroke-dasharray:5 4}
+.calle{fill:none; stroke:var(--tiza-3); stroke-width:1.3}
+.cerro{fill:url(#rayado); stroke:var(--tiza-3); stroke-width:1.2}
+.raya{stroke:var(--tiza-3); stroke-width:1; opacity:.7}
+.iglesia rect, .iglesia path{fill:var(--pizarra-3); stroke:var(--tiza-2); stroke-width:1}
+.surco{stroke:var(--tiza-3); stroke-width:1; stroke-linecap:round; opacity:.65}
+.rotulo{fill:var(--tiza-3); font-family:var(--f-texto) !important; font-style:italic; font-size:12px; paint-order:stroke; stroke:var(--pizarra); stroke-width:4px; stroke-linejoin:round}
+.rotulo-rio{fill:var(--rio-texto); stroke:var(--rio)}
+.marca{cursor:pointer}
+.marca:focus{outline:none}
+.marca .toque{fill:transparent}
+.marca .halo{fill:none}
+.marca .aro{fill:var(--pizarra-2); stroke:var(--tiza-2); stroke-width:1.6}
+.marca .punto-in{fill:var(--tiza)}
+.marca > text{fill:var(--tiza); font-size:12.5px; font-weight:500; paint-order:stroke; stroke:var(--pizarra); stroke-width:4px; stroke-linejoin:round}
+.marca.nueva .aro{stroke:var(--farol); stroke-width:2.4}
+.marca.nueva .punto-in{fill:var(--farol)}
+.marca.nueva .halo{fill:var(--farol-tenue); transform-box:fill-box; transform-origin:center; animation:latido 2.2s ease-in-out infinite}
+.marca:focus-visible .aro{stroke:var(--farol); stroke-width:3.2}
+.candado-mini rect{fill:var(--tiza)}
+.candado-mini path{fill:none; stroke:var(--tiza); stroke-width:1.6}
+.marca.nueva .candado-mini rect{fill:var(--farol)}
+.marca.nueva .candado-mini path{stroke:var(--farol)}
+.moneda-mini circle{fill:var(--farol); stroke:var(--pizarra); stroke-width:1.5}
+.moneda-mini .anillo{fill:none; stroke:#9C6B1E; stroke-width:1}
+.pend circle{fill:var(--farol); stroke:var(--pizarra); stroke-width:1.5}
+.pend text{fill:#1E1A14; font-size:9.5px; font-weight:700; text-anchor:middle}
+@keyframes latido{0%,100%{transform:scale(.82); opacity:.95}50%{transform:scale(1.22); opacity:.35}}
+
+/* Sitio */
+.volver{display:inline-flex; align-items:center; gap:6px; margin-top:12px; padding:8px 0; background:none; border:0; color:var(--tiza-2); font-size:15px}
+.hoyes{display:grid; gap:4px; margin-bottom:14px; padding:10px 14px; border:1px solid var(--pizarra-3); border-radius:6px; background:var(--pizarra-2)}
+.hoyes p:last-child{color:var(--tiza); font-size:16px; font-family:var(--f-texto)}
+.escena{position:relative; width:100%; max-width:100%; aspect-ratio:4/3; border:1px dashed var(--linea); border-radius:6px; overflow:hidden; background:repeating-linear-gradient(135deg, rgba(232,227,213,.04) 0 2px, transparent 2px 13px), var(--pizarra-2)}
+.escena .pendiente{position:absolute; right:10px; bottom:8px; font-family:var(--f-sc); font-weight:700; font-size:12px; letter-spacing:.08em; color:var(--tiza-3)}
+.punto{position:absolute; transform:translate(-50%, -50%); display:flex; flex-direction:column; align-items:center; gap:6px; max-width:46%; padding:4px; background:none; border:0; text-align:center}
+.punto .ojo{width:22px; height:22px; border-radius:50%; border:2px solid var(--farol); background:var(--farol-tenue); box-shadow:0 0 0 6px rgba(230,166,62,.09)}
+.punto .etq{padding:3px 8px; border-radius:3px; background:rgba(36,44,47,.88); font-size:14px; font-weight:500; line-height:1.2}
+.punto.visto .ojo{border-color:var(--tiza-3); background:transparent; box-shadow:none}
+.punto.visto .etq{color:var(--tiza-2)}
+.imagen + .ayuda{margin-top:10px}
+.candado{display:grid; gap:12px; padding:18px; border:1px solid var(--pizarra-3); border-radius:6px; background:var(--pizarra-2)}
+.candado .preg{font-family:var(--f-texto); font-size:18px}
+.aviso{font-size:14px; font-style:italic; color:var(--tiza-3)}
+.error{font-size:15px; color:var(--vino-vivo)}
+
+/* Hoja de papel */
+.velo{position:fixed; inset:0; z-index:20; display:flex; align-items:flex-end; justify-content:center; background:rgba(12,16,17,.64)}
+.hoja{width:min(560px, 100%); max-height:84vh; overflow:auto; display:grid; gap:12px; padding:20px 20px calc(20px + env(safe-area-inset-bottom, 0px)); border-radius:10px 10px 0 0; background:var(--papel); color:var(--tinta); box-shadow:0 -8px 30px rgba(0,0,0,.35); animation:subir .22s ease-out}
+.hoja:focus{outline:none}
+.hoja .pista{display:grid; gap:2px; padding:9px 12px; border:1px dashed var(--vino); border-radius:4px; background:var(--vino-velo); font-family:var(--f-ui); font-size:15px; line-height:1.4; color:var(--tinta)}
+.hoja .pista-etq{font-family:var(--f-sc); font-weight:700; font-size:12px; letter-spacing:.08em; color:var(--vino)}
+.hoja .pista.deduce{border-style:solid; border-width:1.5px}
+.hebreo{display:block; margin-top:6px; font-family:"Noto Serif Hebrew", "SBL Hebrew", "Times New Roman", serif; font-size:26px; line-height:1.5; text-align:right; direction:rtl}
+.hoja .kicker{color:var(--vino)}
+.hoja h3{font-family:var(--f-display); font-weight:500; font-size:30px; line-height:1.05; color:var(--tinta)}
+.hoja .cuerpo{display:grid; gap:10px; font-family:var(--f-texto); font-size:18px; line-height:1.5}
+.hoja .glosa{font-size:14px; font-style:italic; color:var(--tinta-2)}
+.hoja .decide{font-family:var(--f-sc); font-weight:700; font-size:13px; letter-spacing:.08em; color:var(--vino)}
+.hoja .acciones{display:grid; gap:8px}
+.hoja .btn{border-color:var(--tinta-2); color:var(--tinta)}
+.hoja .btn-prim{background:var(--tinta); border-color:var(--tinta); color:var(--papel)}
+.novedades{display:grid; gap:3px; padding-top:10px; border-top:1px dashed rgba(43,37,32,.35)}
+.novedades p{font-family:var(--f-sc); font-weight:700; font-size:13px; letter-spacing:.04em; color:var(--vino)}
+.tela{width:92px; height:54px; background:repeating-linear-gradient(0deg, rgba(0,0,0,.22) 0 1px, transparent 1px 3px), repeating-linear-gradient(90deg, rgba(255,255,255,.1) 0 1px, transparent 1px 3px), var(--vino); clip-path:polygon(4% 12%, 28% 0, 55% 9%, 80% 2%, 100% 18%, 93% 44%, 100% 70%, 86% 100%, 60% 89%, 37% 100%, 12% 91%, 0 64%, 6% 40%)}
+.signo{width:92px; height:92px; color:var(--tinta)}
+@keyframes subir{from{transform:translateY(24px); opacity:.6} to{transform:none; opacity:1}}
+
+/* Archivos */
+.grupo{display:grid; gap:10px}
+.grupo + .grupo{margin-top:22px}
+.grupo h3{font-family:var(--f-sc); font-weight:700; font-size:14px; letter-spacing:.08em; color:var(--farol)}
+.papelito{display:grid; gap:3px; width:100%; padding:13px 16px; border:0; border-radius:3px; background:var(--papel); color:var(--tinta); text-align:left}
+.papelito .tipo{font-family:var(--f-sc); font-weight:700; font-size:12px; letter-spacing:.07em; color:var(--vino)}
+.papelito .t{font-family:var(--f-texto); font-weight:600; font-size:18px; line-height:1.25}
+.papelito:nth-child(even){transform:rotate(-.45deg)}
+.papelito:nth-child(odd){transform:rotate(.35deg)}
+.vacio{font-style:italic; color:var(--tiza-2)}
+
+/* Acusar */
+.frase{display:grid; gap:10px}
+.frase .une{font-family:var(--f-texto); font-size:18px; color:var(--tiza-2)}
+select{width:100%; min-height:48px; padding:10px 12px; border-radius:4px; border:1px solid var(--linea); background:var(--pizarra-2); color:var(--tiza); font:inherit; font-size:16px}
+.frase .btn{margin-top:8px}
+.frase .falta{font-size:14px; font-style:italic; color:var(--tiza-3)}
+.resultado{padding:14px 16px; border:1px solid var(--pizarra-3); border-radius:6px; font-family:var(--f-texto); font-size:18px}
+.resultado.casi{border-color:var(--farol)}
+.resultado.no{border-color:var(--vino-vivo)}
+
+/* Final */
+.final{display:grid; gap:16px; padding-block:28px}
+.final h1{font-size:clamp(40px, 11vw, 54px)}
+.final .texto{display:grid; gap:12px; font-family:var(--f-texto); font-size:19px; line-height:1.55}
+.final h2{margin-top:10px; font-family:var(--f-sc); font-weight:700; font-size:15px; letter-spacing:.08em; color:var(--farol)}
+.final ol, .final ul{display:grid; gap:8px; margin:0; padding-left:22px; font-family:var(--f-texto); font-size:17px; line-height:1.5}
+.final .signo{color:var(--tiza)}
+
+/* Pestañas */
+.pestanas{position:fixed; left:0; right:0; bottom:0; z-index:10; padding-bottom:env(safe-area-inset-bottom, 0px); background:var(--pizarra); border-top:1px solid var(--pizarra-3)}
+.pestanas .in{display:grid; grid-template-columns:repeat(4, 1fr); max-width:560px; margin-inline:auto}
+.tab{position:relative; display:grid; place-items:center; align-content:center; gap:2px; height:var(--barra); background:none; border:0; color:var(--tiza-3); font-family:var(--f-sc); font-weight:700; font-size:13px; letter-spacing:.06em}
+.tab svg{width:22px; height:22px}
+.tab[aria-current="page"]{color:var(--farol)}
+.badge{position:absolute; top:7px; left:calc(50% + 7px); min-width:18px; height:18px; padding:0 5px; border-radius:9px; background:var(--vino); color:#fff; font-family:var(--f-ui); font-size:11px; font-weight:700; line-height:18px; font-variant-numeric:tabular-nums}
+
+/* Aviso flotante */
+.toast{position:fixed; left:50%; bottom:calc(var(--barra) + 14px + env(safe-area-inset-bottom, 0px)); z-index:30; max-width:calc(100% - 32px); padding:10px 14px; border-radius:4px; background:var(--papel); color:var(--tinta); font-size:15px; white-space:pre-line; box-shadow:0 6px 20px rgba(0,0,0,.35); opacity:0; transform:translate(-50%, 10px); transition:opacity .2s, transform .2s; pointer-events:none}
+.toast.ver{opacity:1; transform:translate(-50%, 0)}
+
+/* Versión del boceto y marcas de imagen */
+.version{display:inline-flex; align-items:center; gap:8px; width:fit-content; padding:4px 12px; border:1px solid var(--farol); border-radius:999px; color:var(--farol); font-family:var(--f-sc); font-weight:700; font-size:14px; letter-spacing:.06em}
+.version span{color:var(--tiza-2); font-weight:500}
+.imagen{margin:0; display:grid; border:2px solid var(--rio-linea); border-radius:8px; overflow:hidden; background:var(--pizarra-2)}
+.imagen figcaption{display:grid; gap:3px; padding:10px 14px; background:var(--rio); border-bottom:1px solid var(--rio-linea)}
+.img-tipo{font-family:var(--f-sc); font-weight:700; font-size:13px; letter-spacing:.08em; color:var(--rio-texto)}
+.img-desc{font-family:var(--f-texto); font-style:italic; font-size:16px; line-height:1.4; color:var(--tiza)}
+.img-desc .hebreo{font-style:normal}
+.imagen .escena{border:0; border-radius:0}
+.img-hoja{margin:0; display:grid; gap:6px; padding:10px 12px; border:1.5px dashed var(--rio); border-radius:6px; background:rgba(46,75,82,.07)}
+.img-hoja .img-tipo{color:var(--rio)}
+.img-hoja .img-desc{color:var(--tinta); font-size:17px}
+.img-cap{font-family:var(--f-ui); font-size:14px; font-style:italic; color:var(--tinta-2)}
+.hoja .decide-nota{margin-top:-6px; font-size:14px; font-style:italic; color:var(--tinta-2)}
+.releer{justify-self:start}
+.grupo + .vacio{margin-top:18px}
+.marca.cerrada .aro{fill:var(--pizarra); stroke:var(--linea); stroke-dasharray:2.5 2}
+.marca.cerrada .candado-mini rect{fill:var(--tiza-3)}
+.marca.cerrada .candado-mini path{stroke:var(--tiza-3)}
+.marca.cerrada > text{fill:var(--tiza-3); font-weight:400; font-style:italic}
+
+/* Personajes */
+.pjs{display:grid; gap:12px}
+.pj{display:grid; grid-template-columns:84px 1fr; gap:14px; align-items:start; padding:12px; border:1px solid var(--pizarra-3); border-radius:6px; background:var(--pizarra-2)}
+.pj.nuevo{border-color:var(--farol)}
+.pj-foto{margin:0; width:84px; aspect-ratio:3/4; display:grid; place-items:center; align-content:center; gap:4px; padding:6px; border-radius:4px; text-align:center; font-family:var(--f-sc); font-weight:700; font-size:11px; letter-spacing:.05em; line-height:1.2}
+.pj-foto svg{width:38px; height:38px}
+.pj-foto.vista{border:1.5px dashed var(--rio-linea); background:var(--rio); color:var(--rio-texto)}
+.pj-foto.sin-ver{border:1px dashed var(--linea); background:var(--pizarra); color:var(--tiza-3)}
+.pj-foto .pj-img{font-weight:500; font-size:10px; opacity:.85}
+.pj-txt{display:grid; gap:4px; min-width:0}
+.pj-n{display:flex; flex-wrap:wrap; gap:8px; align-items:center; font-family:var(--f-texto); font-weight:600; font-size:19px; line-height:1.2; color:var(--tiza)}
+.pj-n .chip{color:var(--farol); font-family:var(--f-sc); font-size:11px}
+.pj-rol{font-size:15px; color:var(--tiza-2)}
+.pj-notas{margin:4px 0 0; padding-left:18px; display:grid; gap:4px; font-size:15px; line-height:1.4; color:var(--tiza)}
+.pj .btn-mini{justify-self:start; margin-top:6px}
+.hebreo.pagina{font-size:21px; line-height:1.8}
+
+@media (max-width:480px){ .escena{aspect-ratio:1/1} .caso-nom{font-size:18px} }
+@media (prefers-reduced-motion: reduce){
+  .marca.nueva .halo{animation:none}
+  .hoja{animation:none}
+  .toast{transition:none}
+}
+
+/* Versión 8 */
+.intro-sitio{margin:0 0 12px; font-family:var(--f-texto); font-size:18px; line-height:1.5; color:var(--tiza)}
+.hoja details.antes{display:grid; gap:6px; padding-top:10px; border-top:1px dashed rgba(43,37,32,.35)}
+.hoja details.antes summary{cursor:pointer; font-family:var(--f-sc); font-weight:700; font-size:13px; letter-spacing:.06em; color:var(--vino)}
+.hoja details.antes summary:focus-visible{outline:2px solid var(--vino); outline-offset:2px}
+.libreta{display:grid; gap:12px}
+.entrada{display:grid; gap:6px}
+.entrada + .entrada{padding-top:12px; border-top:1px dashed rgba(43,37,32,.3)}
+.entrada-l{font-family:var(--f-sc); font-weight:700; font-size:12px; letter-spacing:.07em; color:var(--tinta-2)}
+.hoja .entrada p{font-family:var(--f-texto); font-size:17px; line-height:1.45}
+.paso{display:grid; gap:10px; padding:16px; border:1px solid var(--pizarra-3); border-radius:6px; background:var(--pizarra-2)}
+.paso + .paso{margin-top:16px}
+.paso-t{font-family:var(--f-sc); font-weight:700; font-size:14px; letter-spacing:.08em; color:var(--farol)}
+textarea{width:100%; min-height:132px; padding:10px 12px; border-radius:4px; border:1px solid var(--linea); background:var(--pizarra); color:var(--tiza); font-family:var(--f-texto); font-size:17px; line-height:1.45; resize:vertical}
+textarea::placeholder{color:var(--tiza-3)}
+.respuesta{display:grid; gap:4px; padding:12px 14px; border-radius:3px; background:var(--papel); color:var(--tinta)}
+.respuesta .kicker{color:var(--vino)}
+.respuesta p:last-child{font-family:var(--f-texto); font-size:17px; line-height:1.5; white-space:pre-line}
+.btn:disabled{opacity:.55; cursor:progress}
+.teoria-final{font-family:var(--f-texto); font-size:17px; line-height:1.55; color:var(--tiza-2)}
+.flecha{position:fixed; left:50%; bottom:calc(var(--barra) + 16px + env(safe-area-inset-bottom, 0px)); z-index:12; transform:translateX(-50%); display:inline-flex; align-items:center; gap:8px; min-height:44px; padding:8px 16px; border:1px solid var(--farol); border-radius:999px; background:var(--pizarra-2); color:var(--tiza); font-family:var(--f-ui); font-weight:700; font-size:15px; white-space:nowrap; box-shadow:0 0 0 3px var(--farol-tenue), 0 6px 18px rgba(0,0,0,.35); animation:llama 2.2s ease-in-out infinite}
+.flecha-f{color:var(--farol); font-size:20px; line-height:1; animation:baja 1.1s ease-in-out infinite}
+@keyframes llama{0%,100%{box-shadow:0 0 0 3px var(--farol-tenue), 0 6px 18px rgba(0,0,0,.35)}50%{box-shadow:0 0 0 9px rgba(230,166,62,.12), 0 6px 18px rgba(0,0,0,.35)}}
+@keyframes baja{0%,100%{transform:translateY(-2px)}50%{transform:translateY(3px)}}
+.flecha[data-pos="dcha"]{left:auto; right:max(16px, calc(50% - 264px)); transform:none}
+.flecha[data-pos="izda"]{left:max(16px, calc(50% - 264px)); transform:none}
+.flecha[data-pos="fuera-d"]{left:calc(50% + 296px); transform:none}
+.flecha[data-pos="borde-d"]{left:auto; right:16px; transform:none}
+.flecha[data-pos="borde-i"]{left:16px; transform:none}
+.flecha[data-alto="1"]{bottom:calc(var(--barra) + 80px + env(safe-area-inset-bottom, 0px))}
+.flecha.redonda{width:52px; height:52px; min-height:0; padding:0; justify-content:center; gap:0}
+.flecha.redonda .flecha-f{font-size:26px}
+.flecha.redonda .flecha-t{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap}
+@media (prefers-reduced-motion: reduce){ .flecha, .flecha-f{animation:none} }
+
+/* Versión 9: imágenes */
+.imagen.con-img{border:1px solid var(--pizarra-3)}
+.escena.foto{border:0; border-radius:0; background:var(--pizarra-2)}
+.escena.foto > img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; pointer-events:none; -webkit-user-select:none; user-select:none}
+.escena.foto .punto{transform:translate(-50%, -15px); max-width:none}
+.escena.foto .punto .etq{font-size:13px; padding:2px 7px; white-space:nowrap; box-shadow:0 1px 3px rgba(0,0,0,.35)}
+.escena.foto .punto .ojo{background:rgba(230,166,62,.30); box-shadow:0 0 0 2px rgba(20,24,26,.85), 0 0 12px 3px rgba(20,24,26,.35)}
+.escena.foto .punto.visto .ojo{border-color:var(--tiza); background:rgba(36,44,47,.40); box-shadow:0 0 0 2px rgba(20,24,26,.75)}
+.escena.foto .punto.e-arriba{flex-direction:column-reverse; transform:translate(-50%, calc(-100% + 15px))}
+.escena.foto .punto.e-der{flex-direction:row; transform:translate(-15px, -50%)}
+.escena.foto .punto.e-izq{flex-direction:row-reverse; transform:translate(calc(-100% + 15px), -50%)}
+.escena.foto .punto:focus-visible{outline:none}
+.escena.foto .punto:focus-visible .ojo{outline:2px solid var(--tiza); outline-offset:3px}
+.img-hoja.con-img{padding:0; border:0; background:none; gap:8px}
+.img-hoja .rec{width:100%; aspect-ratio:4/3; border-radius:6px; background-repeat:no-repeat; background-color:#d9d2c0; box-shadow:inset 0 0 0 1px rgba(43,37,32,.25)}
+.img-hoja.con-img .img-desc{font-size:16px; color:var(--tinta-2)}
+.img-hoja.foto-pj{justify-items:center; padding:0; border:0; background:none}
+.img-hoja.foto-pj img{display:block; width:auto; max-width:100%; max-height:min(62vh, 560px); aspect-ratio:720/964; object-fit:contain; border-radius:6px; background:#d8d4c8}
+.pj{grid-template-columns:96px 1fr}
+.pj-foto{width:96px}
+.pj-foto.con-foto{padding:0; border:1px solid var(--pizarra-3); overflow:hidden; background:#d8d4c8; cursor:zoom-in}
+.pj-foto.con-foto img{display:block; width:100%; height:100%; object-fit:cover}
+.pj-foto.con-foto:focus-visible{outline:2px solid var(--farol); outline-offset:2px}
+
+/* Versión 10: todas las imágenes y zoom con los dedos */
+.zoom{position:relative; overflow:hidden; touch-action:pan-y; -webkit-user-select:none; user-select:none; -webkit-touch-callout:none}
+.zoom.ampliada{touch-action:none; cursor:grab}
+.zoom.ampliada.gesto{cursor:grabbing}
+.zoom .capa{position:absolute; inset:0; transform-origin:0 0; transition:transform .18s ease-out}
+.zoom.gesto .capa{transition:none}
+.zoom .capa > img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; pointer-events:none; -webkit-user-drag:none; -webkit-user-select:none; user-select:none}
+.escena.foto .punto{transform:translate(-50%, -15px) scale(var(--inv, 1)); transform-origin:50% 15px; transition:transform .18s ease-out}
+.escena.foto .punto.e-arriba{transform:translate(-50%, calc(-100% + 15px)) scale(var(--inv, 1)); transform-origin:50% calc(100% - 15px)}
+.escena.foto .punto.e-der{transform:translate(-15px, -50%) scale(var(--inv, 1)); transform-origin:15px 50%}
+.escena.foto .punto.e-izq{transform:translate(calc(-100% + 15px), -50%) scale(var(--inv, 1)); transform-origin:calc(100% - 15px) 50%}
+.zoom.gesto .punto{transition:none}
+.zoom-barra{display:flex; align-items:center; justify-content:space-between; gap:10px; padding:6px 8px 6px 12px; background:var(--pizarra-2); border-top:1px solid var(--pizarra-3)}
+.zoom-nota{min-width:0; font-size:13px; line-height:1.3; color:var(--tiza-2)}
+.zoom-ctl{display:flex; gap:6px; flex:none}
+.zoom-ctl button{width:38px; height:38px; display:grid; place-items:center; padding:0; border:1px solid var(--linea); border-radius:50%; background:var(--pizarra); color:var(--tiza); font-family:var(--f-ui); font-size:21px; font-weight:700; line-height:1}
+.zoom-ctl button:disabled{opacity:.35; cursor:default}
+.zoom-ctl .z-entera{width:auto; padding:0 11px; border-radius:19px; font-size:14px}
+.zoom-ctl .z-entera[hidden]{display:none !important}
+.img-hoja .zoom-barra{width:100%; padding:8px 0 0; background:none; border:0}
+.img-hoja .zoom-nota{color:var(--tinta-2)}
+.img-hoja .zoom-ctl button{border-color:var(--tinta-2); background:transparent; color:var(--tinta)}
+.ves{display:grid; gap:10px; justify-items:start}
+.lo-que-ves{font-family:var(--f-texto); font-style:italic; font-size:17px; line-height:1.5; color:var(--tinta)}
+.lo-que-ves .hebreo{font-style:normal}
+.img-hoja.foto-pj{display:grid; justify-items:center}
+.foto-zoom{width:min(100%, calc(min(62vh, 560px) * var(--ar))); border-radius:6px; background:#d8d4c8}
+@media (prefers-reduced-motion: reduce){ .zoom .capa, .escena.foto .punto{transition:none} }
+</style>
+
+<div class="app" id="app">
+  <section id="s-menu">
+    <header class="menu-cab">
+      <p class="version">Versión 10 <span>· 1 de octubre de 2026</span></p>
+      <p class="kicker">Casos para resolver caminando por el casco viejo</p>
+      <h1 class="display">Misterios de Tudela</h1>
+      <p class="sub">Crímenes inventados en la Tudela de verdad. A veces hay que salir a la calle a mirar algo.</p>
+    </header>
+    <div class="casos">
+      <article class="caso">
+        <div class="fila entre"><p class="meta">Caso 1 · Tudela, 1485</p><span id="caso1-estado"></span></div>
+        <h2>El ahogado del puente</h2>
+        <p class="resumen">Al amanecer del 7 de octubre, Tudela despierta sin aliento: el Ebro ha devuelto un muerto bajo el puente de piedra.</p>
+        <div class="fila" id="caso1-acciones"></div>
+        <div class="confirmar" id="confirmar-borrar" hidden>
+          <p>¿Borrar tu avance en este caso?</p>
+          <div class="fila">
+            <button class="btn btn-vino btn-mini" data-accion="borrar">Sí, borrar</button>
+            <button class="btn btn-mini" data-accion="no-borrar">No</button>
+          </div>
+        </div>
+      </article>
+      <article class="caso bloq"><p class="meta">Caso 2</p><h2>Próximamente</h2></article>
+      <article class="caso bloq"><p class="meta">Caso 3</p><h2>Próximamente</h2></article>
+    </div>
+    <label class="modo" for="modo-prueba">
+      <input type="checkbox" id="modo-prueba">
+      <span><strong>Modo prueba.</strong> Arriba de cada cosa sale cuál es su pista, y si se da o se deduce. Quítalo antes de que jueguen los demás.</span>
+    </label>
+    <p class="nota-pie">Boceto de prueba con todas las imágenes en arcilla: las trece escenas y las fotos de los personajes. Las escenas se acercan con dos dedos o con el botón +.</p>
+  </section>
+
+  <section id="s-intro1" hidden>
+    <div class="intro">
+      <p class="kicker">Caso 1</p>
+      <h1 class="display">Tudela, otoño de 1485</h1>
+      <div class="texto" id="intro1-texto"></div>
+      <div><button class="btn btn-prim" data-accion="intro-seguir">Seguir</button></div>
+    </div>
+  </section>
+
+  <section id="s-intro2" hidden>
+    <div class="intro">
+      <p class="kicker">Caso 1</p>
+      <h1 class="display">¿Quién eres?</h1>
+      <div class="campo">
+        <label for="nombre">Tu nombre</label>
+        <input type="text" id="nombre" maxlength="24" autocomplete="off" placeholder="Como te quieras llamar">
+      </div>
+      <div class="campo">
+        <p class="etq-campo" id="etq-oficio">Tu oficio</p>
+        <div class="oficios" role="radiogroup" aria-labelledby="etq-oficio">
+          <label><input type="radio" name="oficio" id="of-lavandera" value="lavandera"><span>Lavandera</span></label>
+          <label><input type="radio" name="oficio" id="of-zapatero" value="zapatero"><span>Zapatero</span></label>
+          <label><input type="radio" name="oficio" id="of-hortelana" value="hortelana"><span>Hortelana</span></label>
+          <label><input type="radio" name="oficio" id="of-barquero" value="barquero"><span>Barquero</span></label>
+          <label><input type="radio" name="oficio" id="of-tejedor" value="tejedor"><span>Tejedor</span></label>
+        </div>
+      </div>
+      <div class="texto" id="texto-gabriel"></div>
+      <div><button class="btn btn-prim" data-accion="salir">Salir a la calle</button></div>
+    </div>
+  </section>
+
+  <section id="s-juego" hidden>
+    <div class="tope">
+      <button class="btn btn-mini" data-accion="menu">Menú</button>
+      <span class="caso-nom">El ahogado del puente</span>
+      <span id="monedas"></span>
+    </div>
+    <div id="contenido"></div>
+  </section>
+
+  <section id="s-final" hidden>
+    <div class="final">
+      <p class="kicker">Caso resuelto</p>
+      <h1 class="display">El ahogado del puente</h1>
+      <div class="texto">
+        <p>El alcalde duda. Doña Leonor se sienta a su lado en el concejo desde hace un año. Pero con la declaración de Oria de Lescun y de Abraham encima de la mesa, y al lado el trozo de tela de la torre y la manga rota, no puede taparlo.</p>
+        <p>Doña Leonor va presa. Yusuf vuelve a su horno y Pedro a su huerta. Gabriel sale libre y esa misma semana sigue camino hacia el norte. Nadie en Tudela vuelve a preguntar por su nombre.</p>
+        <p>Abraham vuelve a su telar. Nadie le da las gracias.</p>
+        <p>El escribano Íñigo cierra el caso y guarda los papeles en su casa.</p>
+      </div>
+      <div id="final-teoria"></div>
+      <h2>Lo que pasó</h2>
+      <ol>
+        <li>Lope dejaba pasar la tela de doña Leonor sin cobrarle, a cambio de dinero bajo cuerda. Lo apuntaba en unas hojas al final del cuaderno: eran su seguro, por si algún día lo descubrían.</li>
+        <li>Tras lo de Zaragoza, el alcalde pidió los cuadernos del peaje. Doña Leonor lo supo antes que nadie: estaba sentada a su lado cuando lo decidió. Anteayer, Lope fue a su casa a pedirle más dinero por callar, y ella lo despidió en la puerta prometiéndole pagarle bien todos sus favores.</li>
+        <li>Anoche, mientras su hija daba a luz, doña Leonor salió a escondidas y subió a la torre a «pagarle». Lope le abrió porque la esperaba. Forcejearon, Lope cayó por la ventana al río, ella arrancó las hojas y, al salir deprisa, se rasgó la manga del vestido en el marco de la puerta.</li>
+        <li>No podía quemarlas en casa, llena de gente por el parto. Antes del alba, envuelta en su manto y mientras Yusuf abría la mezquita, las echó al horno de la morería. Abraham la vio a la luz del fuego, y ella alcanzó a verlo a él. Las hojas no llegaron a quemarse del todo.</li>
+        <li>Casi amaneciendo, entró por el corral, oliendo a quemado, y se limpió la ceniza de las manos en el pozo. Oria de Lescun, que seguía cuidando a la madre y a la niña, la vio.</li>
+        <li>Por la mañana fue a casa del alcalde a señalar al forastero, con el manto encima del vestido roto. Por la tarde, ya sin manto, pidió en la plaza que lo juzgaran ya, y ahí se le vio la manga. Asustada de que anduvieras preguntando, te mandó llamar para echarle la culpa a Abraham. En esos días, todos querían un culpable de fuera.</li>
+      </ol>
+      <h2>Cómo se resolvía</h2>
+      <ol>
+        <li>Lope estaba arriba, en su torre: la puerta abierta, el candil encendido y el cuerpo justo debajo (Alí). El taburete volcado: hubo pelea.</li>
+        <li>No fue un robo, aunque Alí y Diego lo creyeran: las monedas seguían contadas en la mesa, y al lado seguía la bolsa, con más dinero que todo el peaje del día. Lope ganaba dinero por otro lado.</li>
+        <li>Nadie forzó la puerta: Lope le abrió a alguien que conocía, porque no le abría a desconocidos (Diego). Mala señal para la idea del forastero, con el que acababa de discutir.</li>
+        <li>Quien lo mató se rasgó la ropa al salir: el trozo de tela cara, color vino, en el marco de la puerta.</li>
+        <li>Lo que se quemó en el horno eran las hojas arrancadas del cuaderno: las mismas tres columnas y la misma letra.</li>
+        <li>Esas hojas apuntaban tela de Zaragoza que pasaba sin pagar, y el alcalde iba a revisar el cuaderno esa semana (Diego).</li>
+        <li>La tela era de doña Leonor: todo lo que vende viene de Zaragoza (lo dicen ella y el mozo del almacén), y el mozo dice que la última llegó hace cinco días. Hoy es 7 de octubre: 7 − 5 = 2, la fecha del papel quemado. Y son 30 piezas, las mismas que cuenta el mozo.</li>
+        <li>Doña Leonor se delató: sabía que faltaban hojas del cuaderno, y nadie había subido a la torre (Diego). Además, si el aragonés hubiera querido borrar su llegada, su entrada no seguiría en el cuaderno.</li>
+        <li>Gabriel no fue: lo que escondía eran sus libros en hebreo (el Shemá: «Escucha, Israel»). Es converso y reza como judío. Lo de las cartas secretas de los asesinos era solo un rumor.</li>
+        <li>Ni Pedro, ni Abraham, ni Sancho: los tres visten lana parda y basta, no tela cara color vino. Que el papel de Pedro tenga algo raro no cambia eso.</li>
+        <li>Yusuf no fue: él abre la mezquita y enciende las lámparas antes de la oración del alba, y esa mañana abrió (Brahim). Además, su túnica color vino está remendada, pero entera: no le falta ningún pedazo.</li>
+        <li>La coartada de doña Leonor no vale: Oria de Lescun la vio volver a escondidas, casi amaneciendo, oliendo a quemado, y limpiarse la ceniza de las manos en el pozo, justo después de la quema que vio Abraham.</li>
+        <li>Doña Leonor se delató otra vez: sabía que el tejedor andaba por la morería antes del alba, y juraba que ella no había salido de su casa. Quería echarle la culpa al único que la vio.</li>
+        <li>Abraham vio en el horno una manga de tela cara de Aragón, color vino, y al vestido de doña Leonor le falta un pedazo de la manga (la plaza).</li>
+      </ol>
+      <p class="ayuda">La mujer del farol que vio Gabriel era Oria de Lescun, camino del parto. Con quién hablaba a escondidas esa noche es otra historia.</p>
+      <h2>Los papeles que guarda Íñigo</h2>
+      <ul>
+        <li>La declaración de Oria de Lescun, partera, treinta y seis años, y de Abraham, tejedor.</li>
+        <li>El papel de Cortes de Pedro Garcés, con el signo de Martín Pérez, escribano de Cortes. Íñigo lo mira más de la cuenta.</li>
+        <li>El cuaderno del peaje, sin sus últimas hojas.</li>
+        <li>El trozo de papel quemado del horno.</li>
+      </ul>
+      <p class="ayuda">Al pie de la declaración va su signo:</p>
+      <svg class="signo" viewBox="0 0 100 100" role="img" aria-label="Signo del escribano Íñigo"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="50" cy="50" r="28"/><path d="M50 10V90M10 50H90"/><path d="M50 32L68 50L50 68L32 50Z"/><path d="M50 10c-7 0-9-6-4-7M50 10c7 0 9-6 4-7M50 90c-7 0-9 6-4 7M50 90c7 0 9 6 4 7M10 50c0-7-6-9-7-4M10 50c0 7-6 9-7 4M90 50c0-7 6-9 7-4M90 50c0 7 6 9 7 4"/><circle cx="50" cy="50" r="3" fill="currentColor"/></g></svg>
+      <div><button class="btn btn-prim" data-accion="menu">Volver al menú</button></div>
+    </div>
+  </section>
+</div>
+
+<nav class="pestanas" id="pestanas" hidden aria-label="Secciones del caso">
+  <div class="in">
+    <button class="tab" data-tab="plano">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-hidden="true"><path d="M3 6l6-2 6 2 6-2v14l-6 2-6-2-6 2z"/><path d="M9 4v14M15 6v14"/></svg>
+      Plano
+    </button>
+    <button class="tab" data-tab="personajes">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19c.6-3.3 2.8-5.2 5.5-5.2s4.9 1.9 5.5 5.2"/><circle cx="17" cy="9" r="2.6"/><path d="M15.6 13.5c.4-.1.9-.2 1.4-.2 2.2 0 3.9 1.6 4.4 4.2"/></svg>
+      Personajes
+      <span class="badge" id="badge-pj" hidden>0</span>
+    </button>
+    <button class="tab" data-tab="archivos">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h7M9 16h5"/></svg>
+      Archivos
+      <span class="badge" id="badge-arch" hidden>0</span>
+    </button>
+    <button class="tab" data-tab="acusar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M12 3v17M6 20h12M4 7h16"/><path d="M7 7l-3 7h6zM17 7l-3 7h6z"/></svg>
+      Acusar
+    </button>
+  </div>
+</nav>
+
+<div class="velo" id="velo" hidden>
+  <div class="hoja" id="hoja" role="dialog" aria-modal="true" aria-labelledby="hoja-tit" tabindex="-1"></div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<button class="flecha" id="flecha" type="button" data-flecha hidden><span class="flecha-f" aria-hidden="true">↓</span><span class="flecha-t">Hay un sitio nuevo más abajo</span></button>
+
+<script>
+(function () {
+  var $ = function (s) { return document.querySelector(s); };
+  var KEY = 'misterios-tudela-caso1-v8';
+  var KEY_MODO = 'misterios-tudela-modo-prueba';
+
+  function inicial() {
+    return {
+      empezado: false, resuelto: false, nombre: '', oficio: '', monedas: 3,
+      visibles: ['puente'], entrados: [], pagados: [], oriaAbierta: false,
+      objetos: [], dichos: {}, ordenT: [], vistos: [],
+      gabriel: null, oria: null, abrahamVio: false, abrahamHabla: false, eventos: [], llamado: false,
+      pj: { gabriel: { v: 1 } }, ordenPJ: ['gabriel'], notasPJ: {}, pjNuevos: ['gabriel'],
+      conv: {}, teoria: '', teoriaResp: '',
+      acus: { q: '', pq: '', p1: '', p2: '' }
+    };
+  }
+  var S = inicial();
+  try {
+    var g = JSON.parse(localStorage.getItem(KEY) || 'null');
+    if (g && typeof g === 'object') S = Object.assign(inicial(), g);
+  } catch (e) {}
+  function guardar() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }
+
+  var modoPrueba = true;
+  try { if (localStorage.getItem(KEY_MODO) === '0') modoPrueba = false; } catch (e) {}
+  function guardarModo() { try { localStorage.setItem(KEY_MODO, modoPrueba ? '1' : '0'); } catch (e) {} }
+
+  var fase = 'menu', vista = 'plano', sitio = null, hojaActual = null, avisos = [];
+
+  function esc(t) { return String(t).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+
+  var SIGNO = '<svg class="signo" viewBox="0 0 100 100" role="img" aria-label="Signo del escribano Íñigo"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="50" cy="50" r="28"/><path d="M50 10V90M10 50H90"/><path d="M50 32L68 50L50 68L32 50Z"/><path d="M50 10c-7 0-9-6-4-7M50 10c7 0 9-6 4-7M50 90c-7 0-9 6-4 7M50 90c7 0 9 6 4 7M10 50c0-7-6-9-7-4M10 50c0 7-6 9-7 4M90 50c0-7 6-9 7-4M90 50c0 7 6 9 7 4"/><circle cx="50" cy="50" r="3" fill="currentColor"/></g></svg>';
+  var SIGNO_CORTES = '<svg class="signo" viewBox="0 0 100 100" role="img" aria-label="Signo del escribano de Cortes"><defs><filter id="tiembla" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="1" seed="4"/><feDisplacementMap in="SourceGraphic" scale="2.6"/></filter></defs><g filter="url(#tiembla)" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M26 92H74M32 92V85H68V92M38 85V78H62V85"/><path d="M50 78V55"/><circle cx="50" cy="24" r="9"/><circle cx="61" cy="35" r="9"/><circle cx="50" cy="46" r="9"/><circle cx="39" cy="35" r="9"/><path d="M50 3V13M45.5 7.5H54.5"/><path d="M50 63c-9-1-15 4-12 10M50 63c9-1 15 4 12 10"/><circle cx="50" cy="35" r="2.6" fill="currentColor"/></g></svg>';
+
+  /* ---------- Objetos y papeles ----------
+     img: lo que en el juego será una imagen aparte. x: el texto que lee el jugador, si hay. */
+  var HEBREO = '<span class="hebreo pagina" lang="he" dir="rtl">שמע ישראל יהוה אלהינו יהוה אחד<br><br>ואהבת את יהוה אלהיך בכל לבבך ובכל נפשך ובכל מאדך והיו הדברים האלה אשר אנכי מצוך היום על לבבך ושננתם לבניך ודברת בם בשבתך בביתך ובלכתך בדרך ובשכבך ובקומך<br><br>וקשרתם לאות על ידך והיו לטטפת בין עיניך וכתבתם על מזוזת ביתך ובשעריך</span>';
+  var DECLARACION = 'La declaración, escrita por el escribano Íñigo:<br>«Abraham, tejedor, dice que antes del alba vio a alguien envuelto en un manto echar papeles al horno de la morería, y que a la luz del fuego le vio la manga: tela cara de Aragón, color vino, la misma del trozo hallado en la torre del peaje.»<br>«Oria de Lescun, partera, de treinta y seis años, dice que casi amaneciendo la señora de la casa donde atendía un parto entró por la puerta del corral, sin farol, con un vestido color vino y oliendo a quemado, y que se limpió las manos en el pozo hasta dejar el agua negra.»<br>Al pie, un signo:';
+  var OBJETOS = {
+    muerto: { tipo: 'Objeto', t: 'El muerto: Lope', img: 'Un hombre boca abajo, enganchado en un pilar del puente, con la cara hinchada por el agua.', x: 'Lo sacaron del río al amanecer.', pista: 'Alí sabe quién es y desde dónde cayó.' },
+    equipaje: { tipo: 'Objeto', t: 'El equipaje de Gabriel', img: 'El equipaje abierto: libros envueltos en una tela. Uno está abierto por una página marcada:' + HEBREO, x: 'No trae mercancía: solo libros.', deduce: true, pista: 'Se deduce: son letras hebreas. Traducido, es el Shemá: «Escucha, Israel: el Señor es nuestro Dios, el Señor es uno. Amarás al Señor tu Dios con todo tu corazón…». Es la oración principal de los judíos, la que se reza al acostarse y al levantarse. No es una carta con planes de asesinato, como dice el rumor: Gabriel es converso y reza como judío. Eso es lo que esconde, no un crimen.' },
+    cuaderno: { tipo: 'Papel', t: 'El cuaderno del peaje', img: 'El cuaderno abierto. Tres columnas por hoja: quién pasa, qué trae y cuánto paga. La letra es grande y torcida. Al final, los bordes de varias hojas arrancadas siguen pegados al lomo. Se lee una entrada: «Día 3. Un aragonés, una mula, mercancía. Pagó 5 monedas».', deduce: true, pista: 'Se deduce: el que arrancó las hojas no buscaba borrar al aragonés, porque su entrada sigue ahí. Fíjate en las columnas y en la letra.' },
+    tela: { tipo: 'Objeto', t: 'El trozo de tela de la torre', img: 'Un trozo de tela enganchado en una astilla del marco de la puerta, a la altura del brazo. Tela fina, color vino, tejida muy apretada.', extra: 'tela', deduce: true, pista: 'Se deduce: quien salió de la torre con prisa se rasgó la ropa. Y no es ropa de pobre.' },
+    manga: { tipo: 'Lo que viste', t: 'La manga rota de doña Leonor', img: 'Doña Leonor, sin manto, con un vestido color vino de tela cara, sin un solo remiendo. En el codo de la manga le falta un pedazo.', deduce: true, pista: 'Se deduce: el mismo color y la misma tela que el trozo de la torre.' },
+    cortes: { tipo: 'Papel', t: 'El papel de Cortes', img: 'Un papel del escribano de Cortes: «El día 6 de octubre, al caer la tarde, Pedro Garcés firmó aquí como testigo de una venta». Al pie, el signo del escribano. Sus líneas tiemblan, como si alguien lo hubiera dibujado muy despacio.', extra: 'signo2', pista: 'Es lo que dice Pedro. (Solo para ti: el papel es falso, una semilla para 2026. Un signo tembloroso es lo que deja quien copia una firma despacio. En este caso no se resuelve: a Pedro se le descarta por la ropa, lana parda y basta.)' },
+    papel: { tipo: 'Papel', t: 'El trozo de papel quemado', img: 'Un trozo de papel a medio quemar. Tres columnas y una letra grande y torcida. Arriba se lee «Día 2». Más abajo, un renglón con el comienzo quemado: «…de Zaragoza, 30 piezas de tela». En la tercera columna, los demás renglones tienen números; ese no tiene nada.', x: 'Lo sacaste de entre la ceniza del horno.', deduce: true, pista: 'Se deduce: es una de las hojas arrancadas del cuaderno (mismas columnas, misma letra). Apunta tela de Zaragoza que pasó sin pagar.' },
+    declaracion: { tipo: 'Papel', t: 'La declaración de Oria de Lescun y Abraham', img: DECLARACION, extra: 'signo', pista: 'La prueba más fuerte contra una jurado de la ciudad. Cada uno cuenta solo lo que vio: las piezas las juntas tú.' }
+  };
+  function tieneObj(id) { return S.objetos.indexOf(id) !== -1; }
+  function tituloObj(id) {
+    if (id === 'muerto' && !dijo('ali', 'puerta')) return 'Un muerto en el río';
+    return (id === 'tela' && S.abrahamHabla) ? 'El trozo de tela de Aragón' : OBJETOS[id].t;
+  }
+  function darObj(id) { if (!tieneObj(id)) { S.objetos.push(id); avisos.push('Guardado en Objetos: ' + tituloObj(id)); } }
+
+  /* ---------- Testimonios: cada persona guarda lo que te dijo, tal cual ---------- */
+  var TESTIGOS = {
+    ali: { n: 'Alí, el barquero' },
+    elvira: { n: 'Elvira, la pescadera' },
+    miguel: { n: 'Miguel, el molinero' },
+    pascual: { n: 'Pascual, el pregonero' },
+    mencia: { n: 'Mencía, la hilandera' },
+    diego: { n: 'Diego, el guardia de la torre' },
+    carcelero: { n: 'El carcelero' },
+    gabriel: { n: 'Gabriel, tu inquilino' },
+    pedro: { n: 'Pedro Garcés, hortelano' },
+    yusuf: { n: 'Yusuf, el hornero' },
+    brahim: { n: 'Brahim, el alfaquí' },
+    beltran: { n: 'Doña Leonor, jurado de la ciudad' },
+    juana: { n: 'Juana, la criada de doña Leonor' },
+    sancho: { n: 'Sancho Lescun, marido de la partera' },
+    oria: { n: 'Oria de Lescun, la partera' },
+    abraham: { n: 'Abraham, el tejedor' }
+  };
+
+  /* ---------- Personajes: se añaden cuando alguien los nombra; la foto sale cuando los ves ---------- */
+  var PJ = {
+    gabriel: { n: 'Gabriel', rol: 'Forastero de Aragón. Tu inquilino desde hace cuatro días.' },
+    lope: { n: 'Lope', rol: 'Guarda del peaje del puente. Es el muerto.' },
+    ali: { n: 'Alí', rol: 'Barquero. Encontró el cuerpo.' },
+    elvira: { n: 'Elvira', rol: 'Pescadera del puente.' },
+    miguel: { n: 'Miguel', rol: 'Molinero del puente.' },
+    pascual: { n: 'Pascual', rol: 'Pregonero.' },
+    mencia: { n: 'Mencía', rol: 'Tu vecina. Hilandera.' },
+    diego: { n: 'Diego', rol: 'Guardia del alguacil. Vigila la torre del peaje.' },
+    carcelero: { n: 'El carcelero', rol: 'Cuida a los presos. Por una moneda te deja hablar con ellos.' },
+    pedro: { n: 'Pedro Garcés', rol: 'Hortelano. Su huerta está al lado de la de Lope.' },
+    abraham: { n: 'Abraham', rol: 'Tejedor. Vive en La Planilla, en la judería.' },
+    beltran: { n: 'Doña Leonor', rol: 'Mercader de telas y jurado de la ciudad: se sienta con el alcalde a gobernar Tudela.' },
+    juana: { n: 'Juana', rol: 'Criada de doña Leonor.' },
+    yusuf: { n: 'Yusuf', rol: 'Hornero de la morería.' },
+    brahim: { n: 'Brahim', rol: 'Alfaquí: el sabio de la mezquita.' },
+    sancho: { n: 'Sancho Lescun', rol: 'Marido de la partera.' },
+    oria: { n: 'Oria de Lescun', rol: 'Partera.' },
+    inigo: { n: 'Íñigo', rol: 'Escribano de Tudela.' }
+  };
+  var NOTAS = {
+    'ali:puerta': [['lope', 'Alí lo reconoció en el río. Vivía solo, sin familia.']],
+    'elvira:tejedor': [['abraham', 'Elvira lo acusa: hace dos días amenazó a Lope en el puente.']],
+    'miguel:pedro': [['pedro', 'Miguel lo acusa: amenazó con ahogar a Lope, y le tenía envidia a su huerta.']],
+    'pascual:beltran': [['beltran', 'Según Pascual, ya sabe quién mató a Lope y ha ido a acusarlo a casa del alcalde.']],
+    'mencia:alguacil': [['gabriel', 'Preso: dicen que mató a Lope. Lo hizo buscar doña Leonor.'], ['beltran', 'Hizo que el alguacil se llevara preso a Gabriel.']],
+    'diego:cuadernos': [['lope', 'Según Diego, no le abría la puerta a desconocidos.'], ['pedro', 'Según Diego, casi se mata con Lope por el agua.']],
+    'carcelero:rumor': [['gabriel', 'El carcelero cree que es uno de los asesinos de Zaragoza.']],
+    'gabriel:discusion': [['beltran', 'Gabriel dice que lo acusó sin conocerlo.']],
+    'pedro:cortes': [['pedro', 'Dice que del 5 al 7 estuvo en Cortes, en la boda de su hermana.']],
+    'yusuf:alba': [['yusuf', 'Dice que antes del amanecer estaba en la mezquita. Lleva una túnica vieja color vino, remendada.']],
+    'beltran:culpa': [['beltran', 'Dice que anoche no salió de su casa: nació su nieta.']],
+    'beltran:tejedor': [['abraham', 'Doña Leonor dice que anoche, antes del alba, andaba rondando por la morería.'], ['beltran', 'En su casa, te señaló a Abraham.']],
+    'sancho:oria': [['oria', 'Según Sancho, es partera y anoche atendió un parto en casa de doña Leonor.']]
+  };
+  function nombrar(id) {
+    if (!PJ[id]) return;
+    if (!S.pj[id]) {
+      S.pj[id] = { v: 0 }; S.ordenPJ.push(id);
+      if (S.pjNuevos.indexOf(id) === -1) S.pjNuevos.push(id);
+      avisos.push('Nuevo en Personajes: ' + PJ[id].n);
+    }
+  }
+  function conocer(id) {
+    if (!PJ[id]) return;
+    nombrar(id);
+    if (!S.pj[id].v) { S.pj[id].v = 1; if (S.pjNuevos.indexOf(id) === -1) S.pjNuevos.push(id); }
+  }
+  function notaPJ(id, texto) {
+    nombrar(id);
+    var l = S.notasPJ[id] || (S.notasPJ[id] = []);
+    if (l.indexOf(texto) === -1) l.push(texto);
+  }
+  function oir(p, k) {
+    var l = S.dichos[p] || (S.dichos[p] = []);
+    if (l.indexOf(k) === -1) {
+      l.push(k);
+      var i = S.ordenT.indexOf(p);
+      if (i !== -1) S.ordenT.splice(i, 1);
+      S.ordenT.push(p);
+      avisos.push('Anotado en Testimonios: ' + TESTIGOS[p].n);
+      conocer(p);
+      (NOTAS[p + ':' + k] || []).forEach(function (n) { notaPJ(n[0], n[1]); });
+    }
+  }
+  function dijo(p, k) { return !!(S.dichos[p] && S.dichos[p].indexOf(k) !== -1); }
+  function entro(id) { return S.entrados.indexOf(id) !== -1; }
+  function mostrarLugar(id) { if (S.visibles.indexOf(id) === -1) { S.visibles.push(id); avisos.push('Se abre en el plano: ' + LUGAR[id].nombre); } }
+  function renovar(clave) { var i = S.vistos.indexOf(clave); if (i !== -1) S.vistos.splice(i, 1); }
+
+  /* Libreta de testimonios: cada conversación se guarda tal cual, en orden, sin repetir */
+  function convDe(q) { return (S.conv && S.conv[q]) || []; }
+  function registrar(h, q) {
+    if (!h || !q || !h.p || !h.p.length || !TESTIGOS[q]) return;
+    if (!S.conv) S.conv = {};
+    var txt = h.p.join('\n');
+    var l = S.conv[q] || (S.conv[q] = []);
+    for (var i = 0; i < l.length; i++) if (l[i].p.join('\n') === txt) return;
+    l.push({ l: sitio && LUGAR[sitio] ? LUGAR[sitio].nombre : '', p: h.p.slice() });
+    var k = S.ordenT.indexOf(q);
+    if (k !== -1) S.ordenT.splice(k, 1);
+    S.ordenT.push(q);
+  }
+  function entradaHTML(e) {
+    return '<div class="entrada">' + (e.l ? '<p class="entrada-l">' + e.l + '</p>' : '') + e.p.map(function (x) { return '<p>' + x + '</p>'; }).join('') + '</div>';
+  }
+
+  var TAREA = { lavandera: 'por lavarle la camisa', zapatero: 'por arreglarle una bota', hortelana: 'por comida de tu huerta', barquero: 'por cargarle el equipaje hasta tu casa', tejedor: 'por remendarle la capa' };
+
+  /* ---------- Gabriel ---------- */
+  var PISTA_GABRIEL_BIEN = 'Gabriel esconde lo que es, no un crimen: sus libros lo delatarían (mira su equipaje en tu casa). La mujer del farol está casada con un borracho: por la taberna se llega a ella. Lo del otro hombre no tiene que ver con Lope: es una semilla para otro caso. Se abre la taberna.';
+  var PISTA_GABRIEL_FAROL = 'Aunque lo amenazaste, para quitarse las sospechas de encima te cuenta lo de la mujer del farol: está casada con un borracho, así que por la taberna se llega a ella. Lo del otro hombre es una semilla para otro caso. Se abre la taberna.';
+  var FAROL_GABRIEL = '«Anoche, a medianoche, vi desde tu ventana a una mujer con un farol y una canasta de trapos. Ya la había visto otras veces, a la pobre, aguantando al borracho de su marido. Pero anoche no estaba con él: hablaba en voz baja con otro hombre, escondidos en un portal. Cuando pasó alguien, se callaron. ¿Y si fueron ellos?»';
+  function hojaGabriel() {
+    if (S.gabriel === 'protegido') return { kicker: 'Testimonio', titulo: 'Gabriel', pista: PISTA_GABRIEL_BIEN, p: ['«Gracias por no delatarme.»', 'Ya te ha contado lo que vio desde tu ventana a medianoche.'] };
+    if (S.gabriel === 'amenazado') {
+      if (dijo('gabriel', 'farol')) return { kicker: 'Testimonio', titulo: 'Gabriel', pista: PISTA_GABRIEL_FAROL, p: ['Gabriel mira la pared. No te vuelve a dirigir la palabra.'] };
+      oir('gabriel', 'farol'); mostrarLugar('taberna');
+      return { kicker: 'Testimonio', titulo: 'Gabriel', pista: PISTA_GABRIEL_FAROL, p: [
+        'Gabriel sigue de cara a la pared. Pero cuando ya te vas, habla deprisa, sin mirarte:',
+        '«¡Yo no he sido! Si quieres un culpable, búscalo en otra parte. Anoche, a medianoche, vi desde tu ventana a una mujer con un farol y una canasta de trapos. Ya la había visto antes, aguantando al borracho de su marido. Pero anoche hablaba en voz baja con otro hombre, escondidos en un portal. ¿Por qué no vas a por ellos?»',
+        '«Y ahora déjame en paz.»'] };
+    }
+    oir('gabriel', 'discusion'); mostrarLugar('beltran');
+    return {
+      kicker: 'Testimonio', titulo: 'Gabriel',
+      pista: 'Discutió con Lope por su equipaje, pero esconde otra cosa: se le traba hasta el apellido. Y vio algo anoche, pero le da miedo contarlo. Lo acusó doña Leonor: se abre su casa. Si lo proteges, te cuenta su secreto y lo que vio; si lo amenazas, se cierra, aunque luego suelta algo.',
+      p: ['Gabriel se pone de pie en cuanto entras. Está pálido, y la ropa buena se le ha llenado del polvo del suelo.',
+        '«Me llamo Gabriel… Gabriel de… de Calatayud.» Se le traba el apellido. «Sí, discutí con Lope. Quiso abrirme el equipaje y no le dejé. Pero yo no lo he matado.»',
+        '«Me ha acusado una tal doña Leonor. ¡Si ni siquiera la conozco! El alguacil dice que es jurado de la ciudad, como si con eso ya estuviera todo dicho.»',
+        'Mira hacia la puerta y baja la voz. «Anoche vi algo desde tu ventana. Algo que a lo mejor te sirve. Pero piénsalo: un forastero de Aragón contra una jurado de Tudela. ¿A quién van a creer? Y a ti, si vas contándolo por ahí, tampoco te van a creer.»',
+        'Te mira como si fueras la última puerta que le queda abierta.'],
+      decide: true,
+      acciones: [
+        { t: 'Prometerle que lo que te cuente no saldrá de aquí', fn: function () {
+          S.gabriel = 'protegido'; oir('gabriel', 'confiesa'); oir('gabriel', 'farol'); mostrarLugar('taberna');
+          return { kicker: 'Testimonio', titulo: 'Gabriel', pista: PISTA_GABRIEL_BIEN, p: [
+            'Gabriel respira hondo, como si llevara días sin hacerlo. «Si Lope abría el equipaje, veía mis libros. Y con ver los libros ya sabía lo que soy. Por eso no le dejé. Por eso huyo de Zaragoza.»',
+            'Después, casi en un susurro, te cuenta lo que vio:', FAROL_GABRIEL] };
+        } },
+        { t: 'Amenazarlo con entregarlo', clase: 'btn', fn: function () {
+          S.gabriel = 'amenazado'; renovar('carcel:gabriel');
+          return { kicker: 'Testimonio', titulo: 'Gabriel', pista: 'Has perdido su confesión. Pero está asustado: si vuelves a hablarle, soltará algo para quitarse las sospechas de encima.', p: ['A Gabriel se le cierra la cara. «No tengo nada más que decirte.»', 'Se vuelve hacia la pared.'] };
+        } }
+      ]
+    };
+  }
+
+  /* ---------- Abraham ---------- */
+  var TEXTO_ABRAHAM = [
+    'Abraham para el telar. Por primera vez te mira de frente. «Si ella habla, yo también.»',
+    '«Quien estaba en el horno iba envuelto en un manto. Pero al echar los papeles sacó el brazo, y el fuego le alumbró la manga. Tela cara, de ricos. Tela de Aragón, color vino. Un buen tejedor reconoce una tela hasta a oscuras.»',
+    'Le enseñas el trozo de la torre. Lo coge entre dos dedos y lo acerca a la luz. «La misma tela.»',
+    '«Y le digo una cosa: el dueño de esta tela va a resultar el mismo desgraciado que pasa carros enteros sin pagar el peaje, mientras a mí me cobran hasta de más.»'
+  ];
+  var PISTA_ABRAHAM_HABLA = 'Se deduce: quien quemaba papeles en el horno vestía tela cara de Aragón, color vino, como el trozo de la torre. Parece que apunta a Gabriel (aragonés, ropa cara), pero la tela de doña Leonor también viene de Zaragoza, en Aragón. Abraham y Oria de Lescun declararán juntos: se abre la casa del escribano.';
+  function hojaAbraham() {
+    if (S.abrahamHabla) return { kicker: 'Testimonio', titulo: 'Abraham, el tejedor', extra: 'tela', pista: PISTA_ABRAHAM_HABLA, deduce: true, p: TEXTO_ABRAHAM };
+    if (!tieneObj('tela')) {
+      return { kicker: 'Testimonio', titulo: 'Abraham, el tejedor', pista: 'Todavía no tienes nada que enseñarle. Vuelve cuando hayas visto la torre del peaje.', p: ['Abraham no levanta la vista del telar. «No sé nada.»', 'Te mira de reojo, igual que mira hoy a todos los que vienen a preguntar por Lope.'] };
+    }
+    if (!S.abrahamVio) {
+      S.abrahamVio = true; oir('abraham', 'horno'); mostrarLugar('horno');
+      if (S.oria === 'dudando' || S.oria === 'cerrada' || S.oria === 'parcial') renovar('oria:oria');
+      return {
+        kicker: 'Testimonio', titulo: 'Abraham, el tejedor',
+        pista: 'Miente: sí sabe quién era, pero tiene miedo; señalar a alguien rico puede costarle la vida. Solo hablará si alguien más declara con él. Se abre el horno de la morería.',
+        p: ['Abraham no deja de tejer. Pero cuando le nombras el trozo de tela de la torre, las manos se le quedan quietas.',
+          '«¿Lope? Que Dios me perdone, pero no pienso llorarlo. Dejaba pasar a medio mundo sin pagar, y a mí me cobraba hasta de más.»',
+          'Se queda un momento callado, con la vista en los hilos.',
+          '«Aunque, ahora que lo pienso… Esta madrugada, antes del alba, pasé por la morería y juraría que vi a alguien en el horno, metiéndole papeles al fuego. Y le digo una cosa: no era nadie de la morería. Era de los que no pisan esas calles.»',
+          'Le preguntas quién era. Vuelve al telar.',
+          '«Eso es mucho decir para un judío. Aquí, por señalar a gente así, a uno lo cuelgan.»']
+      };
+    }
+    if (S.oria === 'habla') {
+      return {
+        kicker: 'Testimonio', titulo: 'Abraham, el tejedor', nolog: true,
+        pista: 'Oria de Lescun ya aceptó declarar. Cuéntaselo a Abraham.',
+        p: ['Abraham sigue tejiendo, pero te está esperando.'],
+        acciones: [{ t: 'Decirle que Oria de Lescun va a declarar', fn: function () {
+          S.abrahamHabla = true; oir('abraham', 'vio'); mostrarLugar('escribano');
+          return { kicker: 'Testimonio', titulo: 'Abraham, el tejedor', extra: 'tela', pista: PISTA_ABRAHAM_HABLA, deduce: true, p: TEXTO_ABRAHAM };
+        } }]
+      };
+    }
+    return {
+      kicker: 'Testimonio', titulo: 'Abraham, el tejedor',
+      pista: 'Hablará cuando alguien más acepte declarar con él.',
+      p: ['«Ya le he dicho lo que vi. No sé más.»', 'Pero no te mira a los ojos. Un judío que declara solo contra un cristiano rico se juega mucho más que su palabra.']
+    };
+  }
+
+  /* ---------- Oria de Lescun ---------- */
+  var FAVORES = '«Anteayer fui a esa casa porque creían que ya venía la nieta de la señora. Fue falsa alarma. Al salir, la oí despedir a Lope en la puerta, muy amable: "Tus favores te los sabré pagar bien, todos."»';
+  function oriaHabla() {
+    var yaFavores = dijo('oria', 'favores');
+    S.oria = 'habla'; oir('oria', 'favores'); oir('oria', 'llegada'); renovar('taller:abraham');
+    var p = ['Oria de Lescun te mira un rato largo, sin parpadear. «¿El tejedor también vio algo? Entonces no estoy sola.»'];
+    if (!yaFavores) p.push(FAVORES);
+    p.push('«Y hay más. Anoche, casi amaneciendo, la señora entró en su propia casa por la puerta del corral. A escondidas, sin farol, oliendo a quemado. No subió a ver a su nieta recién nacida: se fue derecha al pozo y se limpió las manos una y otra vez, hasta dejar el agua negra.»');
+    p.push('«Declararé ante el escribano, si el tejedor declara conmigo. Y que aprenda esa: ni siquiera le ha querido pagar a mi marido el parto de anoche.»');
+    return { kicker: 'Testimonio', titulo: 'Oria de Lescun', deduce: true, pista: 'Se deduce: doña Leonor volvió a escondidas, oliendo a quemado, y se limpió la ceniza de las manos, justo después de que Abraham viera a alguien quemando papeles en el horno: venía de allí. Ahora ve a contárselo a Abraham.', p: p };
+  }
+  function opcionesOria() {
+    var ops = [];
+    if (S.oria === 'dudando') {
+      ops.push({ t: 'Amenazarla con el alcalde', clase: 'btn', fn: function () {
+        S.oria = 'cerrada'; if (S.abrahamVio) renovar('oria:oria');
+        return { kicker: 'Testimonio', titulo: 'Oria de Lescun', pista: 'La asustaste. Solo te volverá a abrir si le cuentas que alguien más vio algo esa noche.', p: ['Oria de Lescun te cierra la puerta en la cara. «Vete. Yo sola, contra una jurado de la ciudad, no digo nada.»'] };
+      } });
+      ops.push({ t: 'Recordarle que van a castigar a un inocente', clase: 'btn', fn: function () {
+        S.oria = 'parcial'; oir('oria', 'favores'); if (S.abrahamVio) renovar('oria:oria');
+        return { kicker: 'Testimonio', titulo: 'Oria de Lescun', pista: 'Doña Leonor y Lope tenían un trato: Lope le hacía favores. Oria de Lescun sabe más, pero no lo dirá si está sola.', p: ['Oria de Lescun duda un buen rato.', FAVORES, '«No diré más. Yo sola, contra una jurado, no.»'] };
+      } });
+    }
+    if (S.abrahamVio) ops.push({ t: 'Contarle que Abraham, el tejedor, también vio algo esa noche', fn: oriaHabla });
+    return ops;
+  }
+  function hojaOria() {
+    if (S.oria === 'habla') return { kicker: 'Testimonio', titulo: 'Oria de Lescun', pista: S.abrahamHabla ? 'Los dos declararán. Ve a la casa del escribano.' : 'Declarará con Abraham. Ve a decírselo a él.', p: ['«Ya te he contado lo que vi. Declararé ante el escribano, pero no sola: con el tejedor.»'] };
+    if (S.oria === 'cerrada') return { kicker: 'Testimonio', titulo: 'Oria de Lescun', nolog: true, pista: S.abrahamVio ? 'Ahora sabes que Abraham también vio algo esa noche: cuéntaselo.' : 'Solo te abrirá si le cuentas que alguien más vio algo esa noche. Busca a quien haya visto algo.', p: S.abrahamVio ? ['Oria de Lescun no quiere verte. Pero tú sabes algo que puede hacerla cambiar de idea: ella no fue la única que vio algo esa noche.'] : ['Oria de Lescun no te abre. «Vete.»', 'Si alguien más vio algo esa noche, quizá hable.'], acciones: opcionesOria() };
+    if (S.oria === 'parcial') return { kicker: 'Testimonio', titulo: 'Oria de Lescun', nolog: true, pista: 'Sabe más, pero no hablará sola. Busca a alguien que también haya visto algo esa noche.', p: S.abrahamVio ? ['Oria de Lescun ya te ha contado lo de los favores. Lo que la tiene callada es el miedo a quedarse sola. Pero tú sabes que ella no fue la única que vio algo esa noche.'] : ['Oria de Lescun ya te ha contado lo de los favores. No quiere decir más.', 'Si alguien más vio algo esa noche, quizá hable.'], acciones: opcionesOria() };
+    if (S.oria === 'dudando') return { kicker: 'Testimonio', titulo: 'Oria de Lescun', nolog: true, pista: 'Sabe algo de doña Leonor. Decide cómo convencerla.', p: ['Oria de Lescun sigue en la puerta. Sabe más de lo que dice.'], decide: true, acciones: opcionesOria() };
+    oir('oria', 'parto'); S.oria = 'dudando';
+    return {
+      kicker: 'Testimonio', titulo: 'Oria de Lescun, la partera',
+      pista: 'Vio algo en casa de doña Leonor, pero tiene miedo: una partera que habla mal de una jurado se queda sin trabajo.',
+      p: ['Oria de Lescun te habla desde la puerta, sin dejarte pasar.',
+        '«Anoche atendí el parto de la hija de doña Leonor. Nació una niña, sana, antes del amanecer.»',
+        'Le preguntas si vio algo raro esa noche. Se queda callada. Cuando nombras a su marido, se tapa la mejilla con el pañuelo.'],
+      decide: true, acciones: opcionesOria()
+    };
+  }
+
+  /* ---------- Doña Leonor (en el código sigue siendo "beltran") ---------- */
+  var GLOSA_ZARAGOZA = 'Zaragoza es la ciudad principal de Aragón, que en 1485 era un reino distinto de Navarra.';
+  var QUIEN_ES_LEONOR = 'Doña Leonor vende la mejor tela de Tudela y, desde hace un año, es jurado: se sienta a la mesa del alcalde cada vez que se decide algo en esta ciudad.';
+  var COARTADA = '«Yo anoche no me moví de casa: nació mi nieta. Ha sido el aragonés, estoy segura. Subió a la torre y le arrancó a Lope las hojas del cuaderno, para que no quedara rastro de su llegada.»';
+  var DISCURSO = '«Esta mañana se lo he dicho al alcalde, y ya está en la cárcel. Hay que juzgarlo cuanto antes. Con lo de los asesinos del inquisidor ya ha habido bastantes líos entre Aragón y Navarra, y toda la tela que vendo viene de Zaragoza. Si Aragón se enfada con nosotros, me quedo sin negocio.»';
+  var PISTA_DESLIZ = '¿Cómo sabe doña Leonor que faltan hojas del cuaderno, si desde el amanecer nadie ha subido a la torre (lo dice Diego)? Y si el aragonés quería borrar su llegada, ¿por qué su entrada sigue en el cuaderno?';
+  function hojaBeltran() {
+    var antes = dijo('beltran', 'culpa');
+    if (!S.llamado) {
+      oir('beltran', 'culpa'); mostrarLugar('carcel');
+      return { kicker: 'Testimonio', titulo: 'Doña Leonor', imagen: { tipo: 'completa', d: 'Doña Leonor, con el manto puesto: acaba de volver de casa del alcalde.' }, deduce: true, pista: 'Se deduce: ' + PISTA_DESLIZ + ' Se abre la cárcel.', p: [QUIEN_ES_LEONOR + ' Te recibe en el patio con una amabilidad que no le cuesta nada.', COARTADA, DISCURSO], glosa: GLOSA_ZARAGOZA };
+    }
+    darObj('manga');
+    if (dijo('beltran', 'tejedor')) {
+      return { kicker: 'Testimonio', titulo: 'Doña Leonor', pista: 'Ya no te dirá nada más. La manga rota se la viste en la plaza.', p: ['«¿Otra vez usted? Ya le he dicho lo que sé. Vaya a preguntarle al tejedor qué hacía en la morería antes del alba.»'] };
+    }
+    oir('beltran', 'tejedor'); mostrarLugar('taller');
+    var p = ['Juana te hace pasar. Doña Leonor te espera en el patio, ya sin manto.'];
+    if (!antes) { oir('beltran', 'culpa'); p.push(QUIEN_ES_LEONOR); p.push(COARTADA); }
+    p.push('«Me dicen que anda usted preguntando por lo de Lope. Hace bien: a esta ciudad le falta gente con ganas.»');
+    p.push('«Le voy a contar algo que no le he dicho al alcalde. Anoche, antes del alba, el tejedor de la judería andaba rondando por la morería. Ese le tenía ganas a Lope, lo sabe todo el puente. Pregúntele qué hacía por allí a esas horas.»');
+    return { kicker: 'Testimonio', titulo: 'Doña Leonor', deduce: true, pista: 'Se deduce: doña Leonor jura que no salió de su casa en toda la noche. Entonces, ¿cómo sabe quién andaba por la morería antes del alba? Quiere echarle la culpa a Abraham, el que vio la quema.' + (antes ? '' : ' Además: ' + PISTA_DESLIZ), p: p, glosa: antes ? '' : GLOSA_ZARAGOZA };
+  }
+
+  /* ---------- Sitios del plano ----------
+     x, y: posición en el plano (0 a 400 de ancho, 0 a 540 de alto).
+     neutro: el nombre que se ve en el plano mientras el sitio sigue cerrado.
+     imagen: lo que se verá en la imagen completa del sitio. intro: una línea de narración encima.
+     hoy: el dato real del sitio (sale en el recuadro "Dato real").
+     puerta: lo que se ve antes de pagar; trasPagar: lo que pasa al pagar (la torre).
+     puntos: x, y en porcentaje dentro de la imagen; t: la persona, si es un testimonio.
+     pista: lo que se ve arriba de cada cosa en modo prueba. */
+  var DATO_SAN_NICOLAS = 'En la plaza de San Nicolás se juntaban las tres calles principales de la Tudela medieval: la que salía hacia Zaragoza, la que salía hacia Castilla y la que salía hacia Pamplona.';
+  var LUGARES = [
+    { id: 'puente', nombre: 'Puente de piedra', x: 120, y: 60, zona: 'Sobre el Ebro',
+      hoy: 'El puente sigue en pie: es el mismo puente medieval sobre el Ebro, de 17 arcos. Sus tres torres ya no existen, pero siguen en el escudo de Tudela.',
+      imagen: 'El puente de piedra al amanecer, con sus torres. Junto a un pilar, varios hombres sacan un cuerpo del agua. En la orilla, gente mirando.',
+      puntos: [
+        { id: 'ali', t: 'ali', label: 'Alí, el barquero', x: 22, y: 24, abrir: function () {
+          oir('ali', 'puerta'); conocer('lope'); mostrarLugar('torre');
+          return { kicker: 'Testimonio', titulo: 'Alí, el barquero', deduce: true, pista: 'Se deduce: Lope estaba arriba, en su torre, y cayó desde ahí: la puerta abierta, el candil encendido y el cuerpo justo debajo. Lo del robo es lo que cree Alí: compruébalo arriba. Se abre la torre del peaje.', p: [
+            'Alí, el barquero, todavía tiene las manos mojadas. Fue él quien lo vio al amanecer, al sacar la barca: un cuerpo enganchado en el pilar que queda justo debajo de la torre del peaje.',
+            '«Es Lope, el del peaje. Vivía solo, sin familia ninguna. A ver quién lo entierra ahora.»',
+            '«Cuando lo vi, la puerta de abajo de la torre estaba abierta, y arriba, en la ventana, todavía había luz de candil. No subí, no. Uno de la morería arriba, con un muerto abajo… ya sabes cómo acaba eso. Fui corriendo a dar aviso.»',
+            '«Para mí que ha sido un robo. Lope siempre tenía mucho dinero allí arriba, y eso lo sabía todo el puente.»'], glosa: 'El peaje era el impuesto que se pagaba por meter o sacar mercancía del reino de Navarra.' };
+        } },
+        { id: 'elvira', t: 'elvira', label: 'Elvira, la pescadera', x: 74, y: 20, abrir: function () {
+          oir('elvira', 'tejedor'); var abre = tieneObj('tela'); if (abre) mostrarLugar('taller');
+          return { kicker: 'Testimonio', titulo: 'Elvira, la pescadera', pista: 'Sospechoso: Abraham, el tejedor, amenazó a Lope hace dos días.' + (abre ? ' Se abre su taller: ya tienes algo que enseñarle.' : ' Su taller se abre cuando tengas algo que enseñarle.'), p: [
+            'Elvira vende en la orilla el pescado que sacan junto a los molinos. Desde su puesto ve pasar a todo Tudela, y lo que no ve, lo adivina.',
+            '«¿Lope? Anteayer mismo, aquí, en mitad del puente, el tejedor de la judería le tiró las monedas a los pies. Delante de todos, a gritos: "¿Por qué a mí me cobras y a otros los dejas pasar? ¡Ya te llegará tu día!"»',
+            '«Abraham, se llama. Iba rojo de rabia. Si no lo sujetan, le pega.»',
+            '«Y hoy aparece Lope en el río. A mí que no me digan que es casualidad.»'], glosa: 'El puente tenía molinos pegados a sus pilares, y junto a ellos se pescaba.' };
+        } },
+        { id: 'pascual', t: 'pascual', label: 'Pascual, el pregonero', x: 50, y: 46, abrir: function () {
+          oir('pascual', 'beltran');
+          return { kicker: 'Testimonio', titulo: 'Pascual, el pregonero', pista: 'Doña Leonor dice que ya sabe quién fue y ha ido a acusarlo a casa del alcalde. Todavía nadie sabe a quién.', p: [
+            'Pascual es el pregonero: recorre las calles cantando lo que manda el concejo, y siempre se entera de todo antes que nadie. Ahora está en mitad del puente, con medio barrio a su alrededor.',
+            '«¡Calma, vecinos, calma! Que nadie eche el cerrojo dos veces esta noche. Doña Leonor, la de las telas, que para algo es jurado y se sienta al lado del alcalde, ya sabe quién ha sido. Esta mañana, a primera hora, ya estaba en casa del alcalde señalando al culpable.»',
+            '«¿El nombre? ¡Ah, eso todavía no! La señora se lo ha querido decir primero al alcalde. ¡Pero pronto, vecinos, muy pronto!»'] };
+        } },
+        { id: 'cuerpo', label: 'Un cuerpo', x: 24, y: 76, abrir: function () {
+          darObj('muerto'); mostrarLugar('casa');
+          return { kicker: 'Lo que ves', titulo: 'Un cuerpo', imagen: { tipo: 'aparte', d: OBJETOS.muerto.img }, pista: 'Alí sabe quién es. Y el alguacil anda por tu calle: ve a tu casa. Se abre tu casa.', p: ['Cuatro hombres lo sacan a pulso, chorreando, pesado como un saco mojado. A tu espalda, alguien murmura que el alguacil anda por tu calle desde primera hora. Buscando a alguien.'] };
+        } },
+        { id: 'miguel', t: 'miguel', label: 'Miguel, el molinero', x: 76, y: 74, abrir: function () {
+          oir('miguel', 'pedro');
+          return { kicker: 'Testimonio', titulo: 'Miguel, el molinero', pista: 'Sospechoso: Pedro amenazó con ahogar a Lope, Lope ha aparecido ahogado, y anoche a Pedro le tocaba estar junto al agua. Además, le tenía envidia a su huerta.', p: [
+            'Miguel muele en uno de los molinos pegados al puente. El agua es su oficio: sabe quién riega, a qué hora le toca a cada uno y quién se la roba al vecino.',
+            '«Todavía no me creo que Pedro Garcés haya llegado a esto. Una cosa es discutir por el agua, que aquí discutimos todos, y otra muy distinta es matar a un hombre.»',
+            '«Pero ha sido él, estoy casi seguro. La semana pasada, en el canal donde se juntan sus dos huertas, se enzarzaron. Pedro lo agarró del cuello y le hundió la cabeza en el agua. Si no llegan a separarlos, lo ahoga allí mismo. Y con Lope todavía tosiendo, le gritó: "¡El día menos pensado te ahogo en tu propia agua!"»',
+            '«Lope tenía la mejor huerta del regadío, la primera que recibe el agua, y Pedro tiene la de al lado. Anoche le tocaba regar a él. Y mira cómo ha aparecido Lope.»'] };
+        } }
+      ] },
+    { id: 'casa', nombre: 'Tu casa', x: 136, y: 296, zona: 'Donde vives',
+      imagen: 'Tu casa por dentro: el cuarto que le alquilaste a Gabriel, con su equipaje en el suelo, la cama deshecha y una ventana a la calle.',
+      puntos: [
+        { id: 'vecina', t: 'mencia', label: 'Mencía, en la calle', x: 26, y: 58, abrir: function () {
+          oir('mencia', 'alguacil');
+          var saludo = S.nombre ? '«¡' + esc(S.nombre) + '! ¿Dónde te habías metido?' : '«¿Dónde te habías metido?';
+          return { kicker: 'Testimonio', titulo: 'Mencía, la hilandera', pista: 'El alguacil se ha llevado preso a tu inquilino, Gabriel, acusado de matar a Lope. Lo ha señalado doña Leonor.', p: [
+            'Sales a la puerta. Enfrente, Mencía, tu vecina, hila sentada en la suya, como todos los días. No se le escapa nadie.',
+            saludo + ' Hace un rato ha venido el alguacil y se ha llevado a tu forastero. Dicen que ha sido él quien ha matado a Lope: los vieron discutir en el puente el día que llegó.»',
+            'Baja la voz, sin dejar de hilar. «Y a que no sabes quién lo ha mandado buscar. Doña Leonor, la de las telas. En persona.»'], glosa: 'La hilandera convierte la lana en hilo, a mano. El alguacil es el que detiene y encierra a los presos.' };
+        } },
+        { id: 'equipaje', label: 'El equipaje de Gabriel', x: 70, y: 72, abrir: function () {
+          darObj('equipaje');
+          return { kicker: 'Lo que ves', titulo: 'El equipaje de Gabriel', imagen: { tipo: 'aparte', d: OBJETOS.equipaje.img }, deduce: true, pista: OBJETOS.equipaje.pista, imagenAbajo: true, p: ['El alguacil ni se ha molestado en llevárselo. Dentro no hay mercancía: solo libros envueltos en una tela. Uno está abierto por una página marcada.'] };
+        } },
+        { id: 'ventana', label: 'La ventana del cuarto', x: 72, y: 24, abrir: function () {
+          return { kicker: 'Lo que ves', titulo: 'La ventana del cuarto', pista: 'Desde aquí Gabriel pudo ver algo anoche.', p: ['Da a la calle. De día se ve pasar a medio barrio; de noche, a quien no quiere que lo vean.'] };
+        } }
+      ] },
+    { id: 'torre', nombre: 'Torre del peaje', x: 120, y: 112, zona: 'Puente de piedra', costo: true,
+      puertaTit: 'Diego, el guardia',
+      puerta: ['Diego guarda la puerta de la torre con los brazos cruzados y cara de no haber dormido.', '«Aquí no sube nadie. Orden del alcalde.»', 'Se le van los ojos a tu bolsa. En Tudela las órdenes del alcalde se cumplen, salvo que alguien pague por lo contrario.'],
+      pagarTxt: 'Darle una moneda',
+      trasPagar: function () {
+        oir('diego', 'cuadernos'); mostrarLugar('huerta');
+        return { kicker: 'Testimonio', titulo: 'Diego, el guardia', quien: 'diego',
+          pista: 'Tres cosas: el alcalde iba a revisar el cuaderno de Lope esta semana; desde el amanecer nadie ha subido; y Lope no le abría a desconocidos. Lo del robo es lo que cree Diego: compruébalo arriba. Se abre la huerta de Pedro.',
+          p: ['Diego se guarda la moneda, pero antes de apartarse habla, sin que se lo pidas.',
+            '«Desde que ha amanecido estoy aquí plantado, y por esta escalera no ha subido nadie. Ni yo. El alcalde ha mandado que nadie toque nada hasta que venga él.»',
+            '«Aunque, para mí, le forzaron la puerta para robarle. Lope no le abría a nadie que no conociera: con el dinero del peaje era más desconfiado que un gato viejo.»',
+            '«Y mire qué casualidad. Desde lo de Zaragoza, el alcalde quiere ver los cuadernos de todos los guardas, para saber qué forasteros entran. Lope tenía que entregarle el suyo esta semana.»',
+            'Se aparta de la puerta. «Suba, pero no toque nada. Y si busca a alguien con ganas de matarlo, pregunte por Pedro Garcés, el hortelano. Esos dos casi se matan por el agua.»'],
+          glosa: 'En 1485 el alcalde era el juez de la ciudad.',
+          acciones: [{ t: 'Subir a la torre', fn: function () { irSitio('torre'); return null; } }], cerrarTxt: 'Todavía no' };
+      },
+      imagen: 'La sala de arriba de la torre, sin nadie: una mesa con el cuaderno abierto, monedas y una bolsa; un candil colgado; un taburete volcado; la puerta abierta y una ventana al río.',
+      intro: 'Arriba huele a aceite quemado. Por la ventana entra el ruido del río.',
+      puntos: [
+        { id: 'cuaderno', label: 'El cuaderno', x: 46, y: 40, abrir: function () { darObj('cuaderno'); return { kicker: 'Papel', titulo: 'El cuaderno del peaje', imagen: { tipo: 'aparte', d: OBJETOS.cuaderno.img }, deduce: true, pista: OBJETOS.cuaderno.pista, p: [] }; } },
+        { id: 'marco', label: 'La puerta', x: 80, y: 56, abrir: function () {
+          darObj('tela'); if (!S.abrahamVio) renovar('taller:abraham'); var abre = dijo('elvira', 'tejedor'); if (abre) mostrarLugar('taller');
+          return { kicker: 'Objeto', titulo: 'La puerta', imagen: { tipo: 'aparte', d: 'La puerta de la torre, entera: ni forzada ni tumbada. En una astilla del marco, a la altura del brazo, hay un trozo de tela enganchado. Tela fina, color vino, tejida muy apretada.' }, extra: 'tela', deduce: true, pista: 'Se deduce: nadie forzó la puerta, así que Lope le abrió a alguien que conocía. Y quien salió deprisa se rasgó la ropa: tela fina, no de pobre.' + (abre ? ' Se abre el taller de Abraham: un tejedor sabe de telas.' : ''), p: [] };
+        } },
+        { id: 'candil', label: 'El candil', x: 72, y: 14, abrir: function () { return { kicker: 'Lo que ves', titulo: 'El candil', imagen: { tipo: 'completa', d: 'Un candil de hierro colgado de la pared, todavía encendido y casi sin aceite.' }, deduce: true, pista: 'Se deduce: ardió toda la noche. Lope estaba despierto aquí arriba cuando llegó quien lo mató.', p: [] }; } },
+        { id: 'monedas', label: 'Las monedas', x: 22, y: 22, abrir: function () { return { kicker: 'Lo que ves', titulo: 'Las monedas', imagen: { tipo: 'completa', d: 'En la mesa, las monedas del peaje de ayer, contadas en montoncitos. Al lado, una bolsa de cuero abierta, con más dinero que todos los montoncitos juntos.' }, deduce: true, pista: 'Se deduce: nadie se llevó el dinero, así que no fue un robo, aunque Alí y Diego lo crean. Y la bolsa tiene más dinero que todo el peaje del día: Lope ganaba dinero por otro lado.', p: [] }; } },
+        { id: 'taburete', label: 'El taburete', x: 52, y: 80, abrir: function () { return { kicker: 'Lo que ves', titulo: 'El taburete', imagen: { tipo: 'completa', d: 'Un taburete volcado en el suelo, junto a la ventana que da al río.' }, deduce: true, pista: 'Se deduce: hubo pelea aquí arriba.', p: [] }; } }
+      ] },
+    { id: 'carcel', nombre: 'La cárcel', x: 214, y: 326, zona: 'Donde el alguacil encierra a los presos', costo: true,
+      puerta: ['El carcelero te corta el paso con la barriga. «Aquí nadie habla con los presos.» Pero los ojos se le van a tu bolsa. «Aunque las noches aquí son largas, y el vino no se paga solo…»'],
+      pagarTxt: 'Ofrecerle una moneda',
+      imagen: 'Una celda oscura con una reja alta y pequeña. Gabriel, sentado en el suelo, con su ropa cara llena de polvo. En la puerta, el carcelero.',
+      puntos: [
+        { id: 'gabriel', t: 'gabriel', label: 'Gabriel', x: 36, y: 50, abrir: hojaGabriel },
+        { id: 'carcelero', t: 'carcelero', label: 'El carcelero', x: 72, y: 80, abrir: function () {
+          oir('carcelero', 'rumor');
+          return { kicker: 'Testimonio', titulo: 'El carcelero', pista: 'Un rumor, no una prueba. Pero si en el equipaje de Gabriel viste letras raras, ¿será una de esas cartas? Tradúcelas.', p: [
+            'Con tu moneda ya en el bolsillo, el carcelero no para de hablar.',
+            '«Ese aragonés es de los de Zaragoza, te lo digo yo. Dicen que los que mataron al inquisidor se mandaban cartas escritas en la lengua de los judíos, para que nadie supiera a quién iban a matar.»',
+            '«¿Y sabes qué más? Que no deja que nadie le toque el equipaje. Por algo será.»'] };
+        } },
+        { id: 'reja', label: 'La reja', x: 78, y: 20, abrir: function () { return { kicker: 'Lo que ves', titulo: 'La reja', imagen: { tipo: 'completa', d: 'La reja de la celda, alta y pequeña.' }, pista: 'Sin pista.', p: ['Por ahí entra el ruido de la calle. La luz, casi nada.'] }; } }
+      ] },
+    { id: 'huerta', nombre: 'Huerta de Pedro', neutro: 'Unas huertas', x: 262, y: 492, zona: 'Fuera de la muralla',
+      imagen: 'Una huerta fuera de la muralla, cruzada por un canal de riego. Pedro, con ropa de lana parda y basta, trabaja la tierra.',
+      puntos: [
+        { id: 'pedro', t: 'pedro', label: 'Pedro Garcés', x: 32, y: 52, abrir: function () {
+          oir('pedro', 'cortes'); darObj('cortes'); mostrarLugar('carcel');
+          return { kicker: 'Testimonio', titulo: 'Pedro Garcés, hortelano', imagen: { tipo: 'aparte', d: OBJETOS.cortes.img }, imagenAbajo: true, extra: 'signo2',
+            pista: 'Pedro dice que el culpable ya está preso y que él estuvo en Cortes. (Solo para ti: el papel es falso, una semilla para 2026. Un signo tembloroso es lo que deja quien copia una firma despacio, y que lo lleve encima y no lo suelte también huele raro. Pero en este caso no se resuelve: a Pedro se le descarta por la ropa, lana parda y basta.) Se abre la cárcel.',
+            p: ['Pedro Garcés no suelta la azada cuando te acercas. Tampoco niega nada.',
+              '«Sí, le metí la cabeza en el agua. Me robaba el agua de riego, y encima me llamó ladrón de tierras delante de todos. Cualquiera habría hecho lo mismo.»',
+              '«Pero si vienes buscando al que lo mató, llegas tarde: dicen que ya lo han pillado y que está en la cárcel. Y yo, del día 5 al 7, estuve en Cortes, en la boda de mi hermana.»',
+              'No le has pedido ninguna prueba. Aun así, se mete la mano en la camisa y saca un papel doblado en cuatro: lo lleva encima. Te lo enseña sin soltarlo del todo y, en cuanto lo has mirado, lo vuelve a guardar.',
+              'Cortes es una villa navarra, río abajo.'],
+            glosa: 'El escribano era como el notario: lo que él escribe y firma da fe. Cada escribano firmaba con su propio signo.' };
+        } },
+        { id: 'canal', label: 'El canal de riego', x: 72, y: 74, abrir: function () { return { kicker: 'Lo que ves', titulo: 'El canal de riego', imagen: { tipo: 'aparte', d: 'La compuerta de la huerta de Pedro, cerrada con la tranca puesta. Su tierra está seca y cuarteada. Las huertas de más abajo brillan de agua.' }, deduce: true, pista: 'Se deduce: anoche le tocaba regar a Pedro (lo dijo Miguel) y no regó, así que no estuvo en su huerta. Dónde estuvo de verdad no se resuelve en este caso.', p: [] }; } }
+      ] },
+    { id: 'taller', nombre: 'Taller de Abraham', neutro: 'Un taller de la judería', neutroCorto: 'Taller de|la judería', x: 60, y: 240, zona: 'Judería · La Planilla',
+      hoy: 'La Planilla era una parte de la judería de Tudela. En su lado este vivían los tejedores, muy cerca de la parroquia de San Miguel.',
+      imagen: 'El taller de Abraham: un telar con lana parda a medio tejer, cestos de lana y Abraham sentado delante.',
+      puntos: [
+        { id: 'abraham', t: 'abraham', label: 'Abraham, el tejedor', x: 38, y: 56, abrir: hojaAbraham },
+        { id: 'telar', label: 'El telar', x: 74, y: 26, abrir: function () { return { kicker: 'Lo que ves', titulo: 'El telar', imagen: { tipo: 'completa', d: 'Lana parda a medio tejer en el telar. Abraham viste esa misma lana parda, remendada.' }, deduce: true, pista: 'Se deduce: Abraham viste lana parda y basta, no tela cara color vino.', p: [] }; } }
+      ] },
+    { id: 'horno', nombre: 'Horno de la morería', x: 58, y: 368, zona: 'Morería',
+      imagen: 'El horno de pan de la morería, en un patio de muros bajos, bajo un cobertizo. La boca todavía tibia y la ceniza revuelta. Yusuf, el hornero, con una túnica vieja color vino, remendada en dos o tres sitios.',
+      puntos: [
+        { id: 'yusuf', t: 'yusuf', label: 'Yusuf, el hornero', x: 28, y: 56, abrir: function () {
+          oir('yusuf', 'alba'); mostrarLugar('mezquita');
+          return { kicker: 'Testimonio', titulo: 'Yusuf, el hornero', imagen: { tipo: 'completa', d: 'Yusuf lleva una túnica vieja color vino, de tela buena, remendada en dos o tres sitios. No le falta ningún pedazo.' }, imagenAbajo: true,
+            pista: 'Es su horno, viste de color vino y parece sospechoso. Pero dice que a esa hora rezaba: compruébalo en la mezquita. Y fíjate en su túnica: remendada, pero entera. Se abre la mezquita.',
+            p: ['Yusuf enciende cada madrugada el horno de pan de la morería. Tiene harina hasta en las cejas.',
+              '«Antes del amanecer yo no estaba aquí: estaba rezando en la mezquita de La Alcazara, con los demás, como todos los días. El horno se queda solo, encendido para el pan.»',
+              '«Pero esta mañana me he encontrado el fuego revuelto. Como si alguien hubiera metido algo.»',
+              'Le preguntas por la túnica. Se mira las mangas. «Me la dio un señor hace años, a cambio de pan. Ya ves cómo está, pero aguanta.»'],
+            glosa: 'La morería era el barrio de los musulmanes.' };
+        } },
+        { id: 'ceniza', label: 'La ceniza', x: 66, y: 74, abrir: function () { darObj('papel'); return { kicker: 'Papel', titulo: 'La ceniza', imagen: { tipo: 'aparte', d: OBJETOS.papel.img }, imagenAbajo: true, deduce: true, pista: OBJETOS.papel.pista, p: ['Remueves la ceniza con un palo. Entre las brasas apagadas asoma algo que el fuego no terminó de comerse.'] }; } },
+        { id: 'puerta', label: 'La puerta del patio', x: 76, y: 24, abrir: function () { return { kicker: 'Lo que ves', titulo: 'La puerta del patio', imagen: { tipo: 'completa', d: 'La puerta del patio del horno, entreabierta. No tiene cerrojo.' }, pista: 'Cualquiera pudo usar el horno mientras Yusuf no estaba.', p: [] }; } }
+      ] },
+    { id: 'mezquita', nombre: 'Mezquita de La Alcazara', x: 96, y: 410, zona: 'Morería',
+      hoy: 'Era la mezquita principal de la morería. En 1518, sobre ella, se levantó la iglesia de San Juan.',
+      imagen: 'La puerta de la mezquita de La Alcazara. Varios hombres conversan a la entrada.',
+      puntos: [
+        { id: 'hombres', t: 'brahim', label: 'Los hombres de la oración', x: 42, y: 58, abrir: function () {
+          oir('brahim', 'confirma');
+          return { kicker: 'Testimonio', titulo: 'Los hombres de la oración', deduce: true, pista: 'Se deduce: si Yusuf no hubiera estado, nadie habría podido entrar a rezar esa mañana. Yusuf no fue.', p: [
+            'En la puerta de la mezquita, varios hombres dejan de hablar al verte llegar. Alguien de fuera preguntando en la morería el día que aparece un muerto nunca trae nada bueno. Al final, el mayor da un paso al frente: es Brahim, el alfaquí.',
+            '«Si viene por Yusuf, pierde el tiempo. Él es quien abre la mezquita y enciende las lámparas antes de la oración del alba. Sin él, aquí no entra nadie. Y esta mañana abrió, como todos los días.»'], glosa: 'El alfaquí era el sabio de la mezquita, el que conocía la ley de los musulmanes.' };
+        } },
+        { id: 'puerta', label: 'La puerta', x: 76, y: 22, abrir: function () { return { kicker: 'Lo que ves', titulo: 'La puerta de la mezquita', imagen: { tipo: 'completa', d: 'La puerta de la mezquita, entreabierta.' }, pista: 'Sin pista.', p: ['No entras. Desde fuera se oye un murmullo de rezos.'] }; } }
+      ] },
+    { id: 'beltran', nombre: 'Casa de doña Leonor', corto: 'Casa de|doña Leonor', neutro: 'Una casa de la Rúa', neutroCorto: 'Casa de|la Rúa', x: 272, y: 262, zona: 'La Rúa',
+      hoy: 'La Rúa era la calle que salía de Tudela hacia Zaragoza y Aragón. Los palacios con escudo que se ven hoy en ella son de después, del Renacimiento.',
+      imagen: 'El patio de una casa rica: la señora de la casa al fondo, un almacén con la puerta abierta y una criada tendiendo sábanas.',
+      puntos: [
+        { id: 'beltran', t: 'beltran', label: 'Doña Leonor', x: 28, y: 40, abrir: hojaBeltran },
+        { id: 'almacen', label: 'El almacén', x: 74, y: 24, abrir: function () { return { kicker: 'Lo que ves', titulo: 'El almacén', imagen: { tipo: 'aparte', d: 'Piezas de tela apiladas hasta el techo. Un mozo las cuenta y les hace una raya con tiza.' }, deduce: true, pista: 'Se deduce: el mozo dice que la tela llegó hace cinco días. Hoy es 7 de octubre: 7 − 5 = 2. El papel quemado dice «Día 2» y habla de 30 piezas: esa tela de Zaragoza que pasó sin pagar es la de doña Leonor.', p: ['«…veintiocho, veintinueve, treinta. Treinta otra vez.» El mozo resopla. «La señora me hace contarlas tres veces al día.»', 'Le preguntas de dónde sale tanta tela. «De Zaragoza, como todo lo de la señora. Llegó hace cinco días.»'] }; } },
+        { id: 'criada', t: 'juana', label: 'Juana, la criada', x: 70, y: 72, abrir: function () {
+          oir('juana', 'parto'); mostrarLugar('taberna');
+          return { kicker: 'Testimonio', titulo: 'Juana, la criada', pista: 'El marido de la partera es un borracho: búscalo donde se bebe. Se abre la taberna.', p: [
+            'Juana tiende sábanas en el patio con los ojos hinchados de sueño. Anoche nació la nieta de la señora, y la casa estuvo llena de gente hasta el amanecer: la partera, las vecinas, media familia.',
+            '«Y esta mañana, para rematar, se ha presentado el marido de la partera a cobrar el parto, borracho como siempre. Ese vive pegado al vaso. La señora lo ha echado a gritos.»'] };
+        } }
+      ] },
+    { id: 'taberna', nombre: 'Taberna de San Nicolás', corto: 'Taberna', x: 310, y: 354, lado: 'izq', zona: 'Plaza de San Nicolás', costo: true,
+      puerta: ['Sancho Lescun no suelta una palabra si no tiene el vaso lleno. Y aquí el vino cuesta una moneda.'], pagarTxt: 'Invitarlo a un vino',
+      hoy: DATO_SAN_NICOLAS,
+      imagen: 'Una taberna oscura. Sancho bebe solo en una mesa; al fondo, otros bebedores.',
+      puntos: [
+        { id: 'sancho', t: 'sancho', label: 'Sancho Lescun', x: 36, y: 54, abrir: function () {
+          oir('sancho', 'oria'); mostrarLugar('oria');
+          return { kicker: 'Testimonio', titulo: 'Sancho Lescun', imagen: { tipo: 'completa', d: 'Sancho, con una manga rota y sucia de vino. Su ropa es de lana parda y basta.' }, pista: 'Te lleva a Oria de Lescun, la partera que atendió el parto en casa de doña Leonor. Se abre su casa. Ojo: Sancho tiene una manga rota, pero es de lana parda y basta.', p: [
+            'Con el vino se le suelta la lengua enseguida.',
+            '«Mi mujer, Oria de Lescun, es partera. Se pasa el día en casas ajenas, trayendo al mundo a los hijos de otros, y mi hijo, el pobre, se cría solo. ¡Qué mala mujer me ha tocado!»',
+            '«Anoche estuvo en casa de doña Leonor, la de las telas. Y la muy rica ni siquiera me ha querido pagar el parto.»',
+            'Le preguntas dónde vive. Se ríe, y te lo explica a su manera, entre trago y trago:',
+            '«Pasando la morería. La casa con el farol en la puerta. No tiene pérdida.»'] };
+        } },
+        { id: 'bebedores', label: 'Los otros bebedores', x: 72, y: 24, abrir: function () { return { kicker: 'Lo que oyes', titulo: 'Los otros bebedores', pista: 'Sin pista: Sancho no es de fiar; su mujer, sí.', p: ['Nadie sale en defensa de Sancho. Desde el fondo, alguien murmura que Oria de Lescun se merece un marido mejor. Nadie le lleva la contraria.'] }; } }
+      ] },
+    { id: 'oria', nombre: 'Casa de Oria de Lescun', corto: 'Casa de Oria|de Lescun', neutro: 'Una casa pasando la morería', neutroCorto: 'Casa tras|la morería', x: 100, y: 330, zona: 'Pasando la morería',
+      imagen: 'Una casa humilde. Oria de Lescun, en la puerta; en mitad del suelo, un farol apagado sobre un taburete y una canasta de trapos; al fondo, un niño.',
+      puntos: [
+        { id: 'oria', t: 'oria', label: 'Oria de Lescun', x: 34, y: 54, abrir: hojaOria },
+        { id: 'nino', label: 'Un niño', x: 72, y: 72, abrir: function () { return { kicker: 'Lo que ves', titulo: 'Un niño', imagen: { tipo: 'completa', d: 'Un niño de unos ocho años copia letras en una tabla de cera, con muy buena mano.' }, pista: 'Sin pista para este caso.', p: ['No levanta la vista de la tabla. Escribe mejor que muchos mayores de esta ciudad.'] }; } },
+        { id: 'farol', label: 'El farol', x: 76, y: 22, abrir: function () { return { kicker: 'Lo que ves', titulo: 'El farol', imagen: { tipo: 'completa', d: 'Un farol apagado sobre un taburete y, al lado, una canasta de trapos.' }, pista: 'Oria de Lescun es la mujer del farol que vio Gabriel a medianoche.', p: ['Lo que se lleva una partera a cada parto: luz para el camino y trapos limpios para el niño.'] }; } }
+      ] },
+    { id: 'escribano', nombre: 'Casa del escribano', neutro: 'Una casa junto a la catedral', neutroCorto: 'Casa junto|a la catedral', x: 250, y: 208, zona: 'Junto a la catedral',
+      hoy: 'La obra que se ve por la ventana es el palacio del deán, que se empezó a construir en 1477. Hoy es el Museo de Tudela, junto a la catedral.',
+      imagen: 'El cuarto de trabajo del escribano: una mesa con papeles, tinta y la declaración. Por la ventana se ve un palacio en obras.',
+      puntos: [
+        { id: 'inigo', label: 'Íñigo, el escribano', x: 30, y: 54, abrir: function () {
+          darObj('declaracion'); conocer('inigo');
+          return { kicker: 'Lo que ves', titulo: 'Íñigo, el escribano', pista: 'Con la declaración de los dos, el alcalde ya no puede tapar a una jurado de la ciudad.', p: [
+            'Oria de Lescun y Abraham declaran juntos ante Íñigo, el escribano. Ella dice su nombre, su oficio y su edad: treinta y seis años. Después habla él, despacio, con los ojos clavados en la pluma que corre por el papel.',
+            'Íñigo la trata con un cuidado que no tiene con nadie. Ella no le sostiene la mirada.'], glosa: 'Contra un cristiano, la palabra de un judío sola valía poco: hacía falta también un testigo cristiano.' };
+        } },
+        { id: 'declaracion', label: 'La declaración', x: 72, y: 66, abrir: function () { darObj('declaracion'); return { kicker: 'Papel', titulo: 'La declaración', imagen: { tipo: 'aparte', d: OBJETOS.declaracion.img }, extra: 'signo', pista: OBJETOS.declaracion.pista, p: [] }; } },
+        { id: 'obra', label: 'La obra de al lado', x: 72, y: 20, abrir: function () { return { kicker: 'Lo que ves', titulo: 'La obra de al lado', imagen: { tipo: 'completa', d: 'Por la ventana: junto a la catedral, unos albañiles levantan un palacio nuevo.' }, pista: 'Sin pista: es el palacio del deán, en obras.', p: [] }; } }
+      ] },
+    { id: 'plaza', nombre: 'Plaza de San Nicolás', corto: 'Plaza de|San Nicolás', x: 332, y: 388, lado: 'izq', zona: 'Donde se pregona',
+      hoy: DATO_SAN_NICOLAS,
+      imagen: 'La plaza de San Nicolás, llena de gente. Pascual pregona subido a un banco; entre la gente, doña Leonor señala con el brazo en alto.',
+      puntos: [
+        { id: 'pregonero', t: 'pascual', label: 'El pregón', x: 30, y: 40, abrir: function () {
+          oir('pascual', 'pregon');
+          return { kicker: 'Lo que oyes', titulo: 'El pregón', pista: 'Van a juzgar a Gabriel dentro de tres días.', p: ['Pascual se sube a un banco, carraspea, y la plaza se calla.', '«¡Oíd, oíd! Por mandato del alcalde, el aragonés preso será juzgado dentro de tres días.»'] };
+        } },
+        { id: 'beltran', t: 'beltran', label: 'Doña Leonor', x: 66, y: 58, abrir: function () {
+          var p = [];
+          if (!dijo('pascual', 'pregon')) { oir('pascual', 'pregon'); p.push('Pascual acaba de pregonar: «Por mandato del alcalde, el aragonés preso será juzgado dentro de tres días».'); }
+          darObj('manga'); oir('beltran', 'pregon'); S.llamado = true; renovar('beltran:beltran'); mostrarLugar('beltran');
+          p.push('«¿Tres días? ¡No, hay que juzgarlo ya!», grita doña Leonor por encima del murmullo. «Que se haga justicia cuanto antes. Con Aragón no se juega: de allí viene el pan de media ciudad.»');
+          p.push('La gente asiente. Cuando la plaza empieza a vaciarse, se te acerca.');
+          p.push('«Usted es quien anda preguntando por lo de Lope, ¿verdad? Pase luego por mi casa. Tengo algo que contarle.»');
+          return { kicker: 'Lo que ves', titulo: 'Doña Leonor, en la plaza', imagen: { tipo: 'completa', d: 'Doña Leonor, sin manto, con un vestido color vino de tela cara, levanta el brazo para señalar hacia la cárcel. En el codo de la manga le falta un pedazo.' }, imagenAbajo: true, deduce: true, pista: 'Se deduce: a doña Leonor le falta un pedazo de la manga, del mismo color que el trozo de tela de la torre. Y ahora te pide que vayas a su casa.', p: p };
+        } }
+      ] }
+  ];
+  var LUGAR = {};
+  LUGARES.forEach(function (l) { LUGAR[l.id] = l; });
+
+  /* ---------- Versión 10: imágenes ----------
+     FOTO_ESCENA: la imagen de cada sitio. max: hasta cuántas veces se puede acercar sin que se pixele.
+     La casa de doña Leonor tiene dos: con manto (primera visita) y sin manto (después de la plaza).
+     COLOCAR: dónde va cada punto en cada imagen (x, y: el centro del círculo, en % de la imagen).
+     corto: el rótulo sobre la imagen (el nombre completo sale al tocar). e: dónde va el rótulo (abajo si no se dice). */
+  var FOTO_ESCENA = {"puente": {"k": "puente", "src": "01.webp", "w": 928, "h": 1152, "max": 1.5}, "casa": {"k": "casa", "src": "02.webp", "w": 2048, "h": 2048, "max": 2}, "torre": {"k": "torre", "src": "03.webp", "w": 2048, "h": 2048, "max": 2}, "carcel": {"k": "carcel", "src": "04.webp", "w": 2048, "h": 2048, "max": 2}, "huerta": {"k": "huerta", "src": "05.webp", "w": 1856, "h": 2304, "max": 2}, "taller": {"k": "taller", "src": "06.webp", "w": 2048, "h": 2048, "max": 2}, "horno": {"k": "horno", "src": "07.webp", "w": 2048, "h": 2048, "max": 2}, "mezquita": {"k": "mezquita", "src": "08.webp", "w": 1856, "h": 2304, "max": 2}, "beltran": {"k": "beltran", "src": "09.webp", "w": 1856, "h": 2304, "max": 2}, "beltran-manto": {"k": "beltran-manto", "src": "09-manto.webp", "w": 1856, "h": 2304, "max": 2}, "taberna": {"k": "taberna", "src": "10.webp", "w": 2048, "h": 2048, "max": 2}, "oria": {"k": "oria", "src": "11.webp", "w": 2048, "h": 2048, "max": 2}, "escribano": {"k": "escribano", "src": "12.webp", "w": 2048, "h": 2048, "max": 2}, "plaza": {"k": "plaza", "src": "13.webp", "w": 1856, "h": 2304, "max": 2}};
+  var COLOCAR = {"puente": {"ali": {"x": 11, "y": 67, "corto": "Alí"}, "elvira": {"x": 31, "y": 60, "corto": "Elvira"}, "pascual": {"x": 50, "y": 61, "corto": "Pascual"}, "cuerpo": {"x": 33, "y": 90, "corto": "Un cuerpo"}, "miguel": {"x": 84, "y": 79, "corto": "Miguel"}}, "casa": {"vecina": {"x": 84, "y": 45, "corto": "Mencía"}, "equipaje": {"x": 50, "y": 76, "corto": "El equipaje"}, "ventana": {"x": 27, "y": 36, "corto": "La ventana"}}, "torre": {"cuaderno": {"x": 31, "y": 46, "corto": "Cuaderno", "e": "arriba"}, "marco": {"x": 85, "y": 55, "corto": "La puerta"}, "candil": {"x": 61, "y": 31, "corto": "El candil", "e": "der"}, "monedas": {"x": 23, "y": 53, "corto": "Monedas"}, "taburete": {"x": 52, "y": 77, "corto": "El taburete"}}, "carcel": {"gabriel": {"x": 44, "y": 48, "corto": "Gabriel"}, "carcelero": {"x": 70, "y": 50, "corto": "El carcelero"}, "reja": {"x": 29, "y": 31, "corto": "La reja", "e": "arriba"}}, "huerta": {"pedro": {"x": 78, "y": 38, "corto": "Pedro"}, "canal": {"x": 55, "y": 37, "corto": "El canal", "e": "arriba"}}, "taller": {"abraham": {"x": 42, "y": 52, "corto": "Abraham"}, "telar": {"x": 58, "y": 44, "corto": "El telar", "e": "arriba"}}, "horno": {"yusuf": {"x": 36, "y": 44, "corto": "Yusuf", "e": "izq"}, "ceniza": {"x": 65, "y": 68, "corto": "La ceniza", "e": "der"}, "puerta": {"x": 29, "y": 62, "corto": "La puerta"}}, "mezquita": {"hombres": {"x": 52, "y": 62, "corto": "Los hombres"}, "puerta": {"x": 52, "y": 42, "corto": "La puerta"}}, "beltran": {"beltran": {"x": 66, "y": 50, "corto": "Doña Leonor"}, "almacen": {"x": 24, "y": 43, "corto": "El almacén", "e": "arriba"}, "criada": {"x": 82, "y": 70, "corto": "Juana"}}, "taberna": {"sancho": {"x": 54, "y": 57, "corto": "Sancho", "e": "izq"}, "bebedores": {"x": 50, "y": 40, "corto": "Los bebedores"}}, "oria": {"oria": {"x": 29, "y": 42, "corto": "Oria"}, "nino": {"x": 61, "y": 43, "corto": "Un niño", "e": "der"}, "farol": {"x": 46, "y": 60, "corto": "El farol"}}, "escribano": {"inigo": {"x": 58, "y": 47, "corto": "Íñigo", "e": "der"}, "declaracion": {"x": 55, "y": 61, "corto": "La declaración"}, "obra": {"x": 26, "y": 38, "corto": "La obra"}}, "plaza": {"pregonero": {"x": 50, "y": 45, "corto": "El pregón", "e": "der"}, "beltran": {"x": 25, "y": 54, "corto": "Doña Leonor", "e": "der"}}, "beltran-manto": {"beltran": {"x": 66, "y": 50, "corto": "Doña Leonor"}, "almacen": {"x": 24, "y": 43, "corto": "El almacén", "e": "arriba"}, "criada": {"x": 82, "y": 70, "corto": "Juana"}}};
+  function fotoDe(id) {
+    if (id === 'beltran' && !S.llamado && FOTO_ESCENA['beltran-manto']) return FOTO_ESCENA['beltran-manto'];
+    return FOTO_ESCENA[id];
+  }
+  function colocado(F, p) {
+    var c = F && COLOCAR[F.k] && COLOCAR[F.k][p.id];
+    return c ? Object.assign({}, p, c) : p;
+  }
+  /* Fotos de los personajes (pestaña Personajes): el número es el de la lista de imágenes. */
+  var PJ_W = 896, PJ_H = 1200;
+  var FOTO_PJ = { gabriel: '29', lope: '30', ali: '31', elvira: '32', miguel: '33', pascual: '34', mencia: '35', diego: '36', carcelero: '37', pedro: '38', abraham: '39', beltran: '40', juana: '41', yusuf: '42', brahim: '43', sancho: '44', oria: '45', inigo: '46' };
+
+  /* ---------- El pregón: la plaza se abre cuando se cumple algo ----------
+     Ya no sale solo en una ventana: la plaza aparece en el plano y entras cuando quieras. */
+  function revisarEventos() {
+    if (fase !== 'juego') return;
+    if (S.eventos.indexOf('pregon') === -1 && ((tieneObj('tela') && tieneObj('papel')) || S.oria !== null)) {
+      S.eventos.push('pregon');
+      if (S.visibles.indexOf('plaza') === -1) S.visibles.push('plaza');
+      guardar();
+      if (enEjecutar) avisos.push('Se oye un pregón en la plaza de San Nicolás. Se abre en el plano.');
+      else toast('Se oye un pregón en la plaza de San Nicolás.\nSe abre en el plano.');
+    }
+  }
+
+  /* ---------- Acusación: solo sale lo que ya descubriste ---------- */
+  var PERSONAS = [
+    ['Abraham', function () { return !!S.dichos.elvira || !!S.dichos.abraham || entro('taller'); }],
+    ['Alí', function () { return !!S.dichos.ali; }],
+    ['Brahim', function () { return !!S.dichos.brahim; }],
+    ['Diego', function () { return !!S.dichos.diego; }],
+    ['Doña Leonor', function () { return !!S.dichos.pascual || !!S.dichos.mencia || !!S.dichos.beltran || dijo('gabriel', 'discusion'); }],
+    ['Elvira', function () { return !!S.dichos.elvira; }],
+    ['Gabriel', function () { return true; }],
+    ['Juana', function () { return !!S.dichos.juana; }],
+    ['Mencía', function () { return !!S.dichos.mencia; }],
+    ['Miguel', function () { return !!S.dichos.miguel; }],
+    ['Oria de Lescun', function () { return !!S.dichos.oria || !!S.dichos.sancho; }],
+    ['Pascual', function () { return !!S.dichos.pascual; }],
+    ['Pedro Garcés', function () { return !!S.dichos.miguel || !!S.dichos.pedro; }],
+    ['Sancho Lescun', function () { return !!S.dichos.juana || !!S.dichos.sancho; }],
+    ['Yusuf', function () { return !!S.dichos.yusuf || !!S.dichos.brahim; }]
+  ];
+  var PORQUES = [
+    ['Lope le cobraba el peaje a él y a otros no', function () { return dijo('elvira', 'tejedor'); }],
+    ['se peleaban por el agua de riego', function () { return dijo('miguel', 'pedro') || dijo('pedro', 'cortes'); }],
+    ['Lope quiso registrarle el equipaje', function () { return dijo('gabriel', 'discusion'); }],
+    ['Lope iba a descubrir lo que escondía en su equipaje', function () { return dijo('gabriel', 'confiesa'); }],
+    ['Lope le dejaba pasar mercancía sin pagar y el alcalde iba a revisar su cuaderno', function () { return tieneObj('papel') || dijo('oria', 'favores') || dijo('abraham', 'vio'); }],
+    ['quería quedarse con la huerta de Lope', function () { return dijo('miguel', 'pedro'); }],
+    ['era uno de los asesinos del inquisidor y Lope lo iba a descubrir', function () { return dijo('carcelero', 'rumor'); }],
+    ['quería robarle el dinero del peaje', function () { return dijo('ali', 'puerta') || dijo('diego', 'cuadernos'); }]
+  ];
+  var PRUEBAS = [
+    ['el trozo de tela de la torre', function () { return tieneObj('tela'); }],
+    ['la manga rota de doña Leonor', function () { return tieneObj('manga'); }],
+    ['el cuaderno del peaje', function () { return tieneObj('cuaderno'); }],
+    ['el canal de la huerta de Pedro', function () { return S.vistos.indexOf('huerta:canal') !== -1; }],
+    ['lo que dijo Alí', function () { return dijo('ali', 'puerta'); }],
+    ['lo que dijo Diego en la torre', function () { return dijo('diego', 'cuadernos'); }],
+    ['lo que dijo doña Leonor en su casa', function () { return dijo('beltran', 'culpa'); }],
+    ['el papel quemado del horno', function () { return tieneObj('papel'); }],
+    ['el papel de Cortes', function () { return tieneObj('cortes'); }],
+    ['el equipaje de Gabriel', function () { return tieneObj('equipaje'); }],
+    ['la declaración ante el escribano', function () { return tieneObj('declaracion'); }],
+    ['lo que dice Elvira de Abraham', function () { return dijo('elvira', 'tejedor'); }],
+    ['lo que dice Miguel de Pedro', function () { return dijo('miguel', 'pedro'); }],
+    ['lo que dice Pascual de doña Leonor', function () { return dijo('pascual', 'beltran'); }],
+    ['la discusión de Gabriel con Lope', function () { return dijo('gabriel', 'discusion'); }],
+    ['lo que dicen en la mezquita', function () { return dijo('brahim', 'confirma'); }],
+    ['lo que vio Abraham en el horno', function () { return dijo('abraham', 'vio'); }],
+    ['lo que contó Oria de Lescun', function () { return dijo('oria', 'favores') || dijo('oria', 'llegada'); }]
+  ];
+  var QUIEN_OK = 'Doña Leonor';
+  var PORQUE_OK = PORQUES[4][0];
+  var FISICAS_OK = ['el trozo de tela de la torre', 'la manga rota de doña Leonor', 'el papel quemado del horno'];
+  var TESTIGOS_OK = ['lo que vio Abraham en el horno', 'la declaración ante el escribano', 'lo que contó Oria de Lescun'];
+  var DESLIZ = 'lo que dijo doña Leonor en su casa';
+  function testimonioValido(p) {
+    if (p === 'lo que contó Oria de Lescun') return S.oria === 'habla';
+    return TESTIGOS_OK.indexOf(p) !== -1;
+  }
+  function disponibles(lista) { return lista.filter(function (o) { return o[1](); }).map(function (o) { return o[0]; }); }
+
+  /* ---------- Dibujo del plano ---------- */
+  function pendientes(L) {
+    return L.puntos.filter(function (p) { return S.vistos.indexOf(L.id + ':' + p.id) === -1; }).length;
+  }
+  function etiqueta(L) { return (L.corto || L.nombre).replace('|', ' '); }
+  var CANDADO = '<g class="candado-mini"><rect x="-4.5" y="-1.5" width="9" height="7" rx="1.2"/><path d="M-2.6,-1.5v-2.2a2.6,2.6 0 0 1 5.2,0v2.2"/></g>';
+  function marcaSVG(L) {
+    var abierto = S.visibles.indexOf(L.id) !== -1;
+    var izq = L.lado === 'izq';
+    var tx = izq ? -19 : 19, ancla = izq ? 'end' : 'start';
+    var partes = (abierto ? (L.corto || L.nombre) : (L.neutroCorto || L.neutro || L.corto || L.nombre)).split('|');
+    var texto = partes.length > 1
+      ? '<text x="' + tx + '" y="-2.6" text-anchor="' + ancla + '"><tspan x="' + tx + '">' + partes[0] + '</tspan><tspan x="' + tx + '" dy="14">' + partes[1] + '</tspan></text>'
+      : '<text x="' + tx + '" y="4.4" text-anchor="' + ancla + '">' + partes[0] + '</text>';
+    if (!abierto) {
+      return '<g class="marca cerrada" transform="translate(' + L.x + ' ' + L.y + ')" data-lugar="' + L.id + '" role="button" tabindex="0" aria-label="' + (L.neutro || L.nombre) + ', todavía cerrado">' +
+        '<circle class="toque" r="22"/><circle class="aro" r="11"/>' + CANDADO + texto + '</g>';
+    }
+    var nueva = S.entrados.indexOf(L.id) === -1;
+    var cerrado = L.candado && !S.oriaAbierta;
+    var cobra = L.costo && S.pagados.indexOf(L.id) === -1;
+    var pend = (!nueva && !cerrado) ? pendientes(L) : 0;
+    var aria = L.nombre + (cobra ? ', cuesta una moneda' : '') + (cerrado ? ', hay que salir a la calle' : '') + (nueva ? ', nuevo' : '') + (pend ? ', ' + pend + ' cosas por mirar' : '');
+    return '<g class="marca' + (nueva ? ' nueva' : '') + '" transform="translate(' + L.x + ' ' + L.y + ')" data-lugar="' + L.id + '" role="button" tabindex="0" aria-label="' + aria + '">' +
+      '<circle class="toque" r="22"/><circle class="halo" r="17"/><circle class="aro" r="11"/>' +
+      (cerrado ? CANDADO : '<circle class="punto-in" r="3.6"/>') +
+      (cobra ? '<g class="moneda-mini" transform="translate(10 -10)"><circle r="5"/><circle class="anillo" r="2.4"/></g>' : '') +
+      (pend ? '<g class="pend" transform="translate(-10 -10)"><circle r="6.5"/><text y="3.3">' + pend + '</text></g>' : '') +
+      texto + '</g>';
+  }
+  function svgPlano() {
+    var marcas = LUGARES.filter(function (L) { return S.visibles.indexOf(L.id) === -1; }).concat(LUGARES.filter(function (L) { return S.visibles.indexOf(L.id) !== -1; })).map(marcaSVG).join('');
+    return '<svg class="plano" viewBox="0 0 400 540" role="group" aria-label="Plano de Tudela en 1485">' +
+      '<defs><pattern id="rayado" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(40)"><line x1="0" y1="0" x2="0" y2="7" class="raya"/></pattern></defs>' +
+      '<path class="rio" d="M0,58 C90,40 170,70 260,72 C320,73 360,90 400,100 L400,142 C360,132 320,118 260,116 C170,114 90,86 0,104 Z"/>' +
+      '<path class="ola" d="M22,80 q8,-4 16,0 t16,0"/><path class="ola" d="M196,90 q8,-4 16,0 t16,0"/><path class="ola" d="M344,114 q8,-4 16,0 t16,0"/>' +
+      '<text class="rotulo rotulo-rio" x="262" y="101">río Ebro</text>' +
+      '<path class="cerro" d="M14,186 C20,152 42,132 68,130 C92,129 106,144 106,164 C106,178 98,186 86,188 Z"/>' +
+      '<text class="rotulo" x="40" y="164">castillo</text>' +
+      '<path class="muralla" d="M134,128 L250,130 L345,146 L384,240 L374,330 L332,420 L222,442 L120,434 L46,394 L26,300 L28,196 L40,130 L106,127"/>' +
+      '<rect class="puente" x="113" y="30" width="14" height="96" rx="2"/>' +
+      '<rect class="torrecita" x="110" y="34" width="20" height="12" rx="1"/><rect class="torrecita" x="110" y="74" width="20" height="12" rx="1"/><rect class="torrecita" x="110" y="106" width="20" height="12" rx="1"/>' +
+      '<path class="calle" d="M226,246 C262,258 322,280 398,306"/>' +
+      '<text class="rotulo" x="236" y="244">La Rúa</text>' +
+      '<text class="rotulo" x="396" y="290" text-anchor="end">a Zaragoza →</text>' +
+      '<g class="iglesia" transform="translate(176 152)"><rect x="-6" y="-4" width="12" height="10"/><path d="M-7,-4 L0,-10 L7,-4 Z"/></g>' +
+      '<text class="rotulo" x="188" y="156">la Magdalena</text>' +
+      '<g class="iglesia" transform="translate(212 236)"><rect x="-8" y="-14" width="16" height="30"/><rect x="-16" y="-5" width="32" height="10"/></g>' +
+      '<text class="rotulo" x="212" y="268" text-anchor="middle">catedral</text>' +
+      '<g class="iglesia" transform="translate(345 330)"><rect x="-6" y="-4" width="12" height="10"/><path d="M-7,-4 L0,-10 L7,-4 Z"/></g>' +
+      '<text class="rotulo" x="345" y="312" text-anchor="middle">San Nicolás</text>' +
+      '<text class="rotulo" x="34" y="214">judería · La Planilla</text>' +
+      '<text class="rotulo" x="24" y="348">morería</text>' +
+      '<g class="surcos"><path class="surco" d="M150,470h70M150,479h70M150,488h70M150,497h70M150,506h70"/><path class="surco" d="M300,508h64M300,517h64M300,526h64"/></g>' +
+      '<text class="rotulo" x="150" y="460">huertas</text>' +
+      marcas + '</svg>';
+  }
+
+  /* ---------- Vistas del juego ---------- */
+  function htmlPlano() {
+    var nuevos = LUGARES.filter(function (L) { return S.visibles.indexOf(L.id) !== -1 && !entro(L.id); });
+    var h = '<div class="vista-cab"><p class="kicker">Tudela · 7 de octubre de 1485</p><h2>El plano</h2><p class="ayuda">Toca un sitio para entrar. Los apagados, con candado, se abren cuando alguien te los nombra. El número amarillo dice cuántas cosas te faltan por mirar en ese sitio.</p><button class="enlace releer" data-comienzo>Releer el comienzo</button></div>';
+    if (nuevos.length) {
+      h += '<div class="nuevos"><p class="kicker">Sin visitar</p><div class="fila">' + nuevos.map(function (L) {
+        return '<button class="chip-lugar" data-lugar="' + L.id + '"><span class="punto-chip" aria-hidden="true"></span>' + etiqueta(L) + '</button>';
+      }).join('') + '</div></div>';
+    }
+    return h + '<div class="plano-caja">' + svgPlano() + '</div>' +
+      '<p class="pie-plano">Plano aproximado, dibujado a mano. No está a escala.</p>';
+  }
+  function htmlCandado() {
+    return '<div class="candado"><p class="kicker">Salida a la calle</p>' +
+      '<p class="preg">Sancho te explicó cómo encontrar la casa de Oria de Lescun, con algo que se ve en la calle.</p>' +
+      '<p class="preg"><strong>Pregunta:</strong> por definir.</p>' +
+      '<div class="campo"><label for="resp-salida">Lo que viste</label><input type="text" id="resp-salida" autocomplete="off" autocapitalize="none"></div>' +
+      '<div><button class="btn btn-prim" data-abrir-oria>Abrir</button></div>' +
+      '<p class="error" id="err-salida" hidden>No es eso. Vuelve a mirar.</p>' +
+      '<p class="aviso">Boceto: mientras se define la salida, escribe PRUEBA.</p></div>';
+  }
+  function htmlSitio() {
+    var L = LUGAR[sitio];
+    var h = '<button class="volver" data-tab="plano">← Plano</button><div class="vista-cab"><p class="kicker">' + L.zona + '</p><h2>' + L.nombre + '</h2></div>';
+    if (L.hoy) h += '<aside class="hoyes"><p class="kicker">Dato real</p><p>' + L.hoy + '</p></aside>';
+    if (L.candado && !S.oriaAbierta) {
+      h += htmlCandado();
+    } else {
+      if (L.intro) h += '<p class="intro-sitio">' + L.intro + '</p>';
+      var F = fotoDe(sitio);
+      var cab = F ? '<figure class="imagen con-img"><div class="escena foto zoom" data-zoom="' + esc(sitio + '|' + F.src) + '" data-max="' + F.max + '" style="aspect-ratio:' + F.w + '/' + F.h + '"><div class="capa"><img src="' + F.src + '" alt="' + esc(L.imagen || L.nombre) + '" width="' + F.w + '" height="' + F.h + '" decoding="async" draggable="false">'
+        : '<figure class="imagen"><figcaption><span class="img-tipo">Esto es una imagen completa</span>' + (L.imagen ? '<span class="img-desc">' + L.imagen + '</span>' : '') + '</figcaption><div class="escena"><div>';
+      h += cab + L.puntos.map(function (p0) {
+        var p = colocado(F, p0);
+        var visto = S.vistos.indexOf(sitio + ':' + p.id) !== -1;
+        var etq = (F && p.corto) ? p.corto : p.label;
+        return '<button class="punto' + (visto ? ' visto' : '') + (F && p.e ? ' e-' + p.e : '') + '" style="left:' + p.x + '%;top:' + p.y + '%" data-punto="' + p.id + '"' + (etq !== p.label ? ' aria-label="' + esc(p.label) + '"' : '') + '><span class="ojo" aria-hidden="true"></span><span class="etq">' + etq + '</span></button>';
+      }).join('') + '</div></div>' + (F && F.max > 1 ? controlesZoom(F.max) : '') + '</figure><p class="ayuda">Toca lo que quieras mirar. Lo amarillo todavía no lo has visto.</p>';
+    }
+    return h;
+  }
+  function htmlArchivos() {
+    var h = '<div class="vista-cab"><p class="kicker">Lo que llevas recogido</p><h2>Archivos</h2></div>';
+    h += '<div class="grupo"><h3>El comienzo</h3><button class="papelito" data-comienzo><span class="tipo">Para releer</span><span class="t">Lo que sabías al empezar</span></button></div>';
+    if (!S.objetos.length && !S.ordenT.length) return h + '<p class="vacio">Todavía no has recogido nada. Empieza por el puente.</p>';
+    h += '<div class="grupo"><h3>Objetos y papeles</h3>';
+    h += S.objetos.length ? S.objetos.slice().reverse().map(function (id) {
+      return '<button class="papelito" data-obj="' + id + '"><span class="tipo">' + OBJETOS[id].tipo + '</span><span class="t">' + tituloObj(id) + '</span></button>';
+    }).join('') : '<p class="vacio">Todavía ninguno.</p>';
+    h += '</div><div class="grupo"><h3>Testimonios</h3><p class="ayuda">Todo lo que te ha dicho cada uno, tal cual y en orden.</p>';
+    h += S.ordenT.length ? S.ordenT.slice().reverse().map(function (p) {
+      var n = convDe(p).length;
+      return '<button class="papelito" data-testigo="' + p + '"><span class="tipo">' + (n > 1 ? n + ' conversaciones' : 'Testimonio') + '</span><span class="t">' + TESTIGOS[p].n + '</span></button>';
+    }).join('') : '<p class="vacio">Todavía ninguno.</p>';
+    return h + '</div>';
+  }
+  var SILUETA = '<svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="14" r="7" fill="currentColor" opacity=".6"/><path d="M6 38c1.5-8.5 7-13 14-13s12.5 4.5 14 13z" fill="currentColor" opacity=".6"/></svg>';
+  function htmlPersonajes() {
+    var h = '<div class="vista-cab"><p class="kicker">La gente del caso</p><h2>Personajes</h2><p class="ayuda">Aquí aparece cada persona que conoces o que alguien te nombra. Su foto sale cuando la ves en persona; tócala para verla en grande.</p></div><div class="pjs">';
+    h += S.ordenPJ.slice().reverse().map(function (id) {
+      var P = PJ[id], st = S.pj[id], notas = S.notasPJ[id] || [];
+      var nuevo = S.pjNuevos.indexOf(id) !== -1;
+      var foto = st.v
+        ? (FOTO_PJ[id] ? '<button class="pj-foto con-foto" data-foto="' + id + '" aria-label="Ver la foto de ' + esc(P.n) + '"><img src="' + FOTO_PJ[id] + '.webp" alt="" width="' + PJ_W + '" height="' + PJ_H + '" loading="lazy" decoding="async"></button>'
+          : '<figure class="pj-foto vista">' + SILUETA + '<span>Aquí va su foto</span><span class="pj-img">imagen aparte</span></figure>')
+        : '<figure class="pj-foto sin-ver">' + SILUETA + '<span>Sin ver todavía</span></figure>';
+      return '<article class="pj' + (nuevo ? ' nuevo' : '') + '">' + foto + '<div class="pj-txt"><p class="pj-n">' + P.n + (nuevo ? '<span class="chip">Nuevo</span>' : '') + '</p><p class="pj-rol">' + P.rol + '</p>' +
+        (notas.length ? '<ul class="pj-notas">' + notas.map(function (n) { return '<li>' + n + '</li>'; }).join('') + '</ul>' : '') +
+        (convDe(id).length ? '<button class="btn btn-mini" data-testigo="' + id + '">Ver lo que te dijo</button>' : '') + '</div></article>';
+    }).join('');
+    return h + '</div>';
+  }
+  function opciones(lista, sel) {
+    return '<option value="">Escoge…</option>' + lista.map(function (o) { return '<option' + (o === sel ? ' selected' : '') + '>' + o + '</option>'; }).join('');
+  }
+
+  /* ---------- La teoría: el alcalde la lee (si se puede) ---------- */
+  var PROMPT_ALCALDE = [
+    'Eres el alcalde de Tudela (Navarra) en octubre de 1485, dentro de un juego de misterio. Un vecino te cuenta, con sus palabras, su teoría sobre la muerte de Lope, el guarda del peaje del puente. Tú conoces la verdad, que va más abajo. Tu trabajo es decirle qué partes de su teoría se sostienen y cuáles no, sin revelarle nada que él no haya dicho.',
+    '',
+    'CÓMO CONTESTAS',
+    '- En español de España, de tú, como el alcalde: seco, desconfiado y justo. De 3 a 6 frases cortas, sin listas, sin títulos y sin comillas.',
+    '- Repasa lo que afirma el vecino. Lo que sea cierto y esté bien razonado, dile que te convence. Lo que sea falso o no se sostenga, dile que eso no te convence, y si hace falta di por qué usando solo lo que él mismo ha dicho.',
+    '- Nunca digas quién es el culpable si el vecino no lo ha dicho. Si culpa a otra persona, dile que eso no te convence, sin decir quién fue y sin dar pistas nuevas.',
+    '- Nunca menciones pruebas, testigos, lugares ni hechos que el vecino no haya mencionado. Nunca expliques la solución.',
+    '- Si acierta en lo importante (la culpable, el motivo, al menos una prueba que se pueda tocar y un testigo que se sostenga), dile que lo presente formalmente ante ti con la acusación. Si le falta algo de eso, dile en general qué le falta (un motivo, una prueba que se pueda tocar o alguien que declare), sin decir cuál.',
+    '- Si el texto no es una teoría sobre el caso, pídele que te cuente quién fue, por qué y cómo lo sabe.',
+    '',
+    'LA VERDAD (no la cuentes)',
+    '- Culpable: doña Leonor, mercader de telas y jurado de la ciudad.',
+    '- Motivo: Lope le dejaba pasar tela de Zaragoza sin pagar el peaje a cambio de dinero bajo cuerda, y lo apuntaba en unas hojas al final de su cuaderno. El alcalde iba a revisar los cuadernos del peaje esa semana, y Lope le había pedido más dinero por callar.',
+    '- Lo que pasó: la noche del 6 al 7, durante el parto de su hija, doña Leonor salió de casa y subió a la torre. Lope le abrió porque la conocía. Forcejearon y Lope cayó por la ventana al río. Ella arrancó las hojas y se rasgó la manga del vestido en el marco de la puerta. Antes del alba, envuelta en un manto, quemó las hojas en el horno de la morería mientras Yusuf abría la mezquita. Casi amaneciendo volvió a su casa por el corral, oliendo a quemado, y se limpió las manos en el pozo. Por la mañana acusó al forastero aragonés, Gabriel. Después intentó culpar a Abraham, el tejedor.',
+    '- Pruebas que se pueden tocar: el trozo de tela fina color vino enganchado en el marco de la puerta de la torre; la manga rota del vestido color vino de doña Leonor, a la que le falta un pedazo en el codo; el trozo de papel medio quemado del horno, que es una hoja del cuaderno («Día 2», «…de Zaragoza, 30 piezas de tela», sin nada pagado).',
+    '- Otras cosas ciertas: la puerta de la torre no estaba forzada; el dinero seguía en la torre, así que no fue un robo; la tela del almacén de doña Leonor viene de Zaragoza y llegó hace cinco días (hoy es 7, así que el día 2), y son 30 piezas; doña Leonor sabía que faltaban hojas del cuaderno aunque nadie había subido a la torre; doña Leonor dijo que el tejedor andaba por la morería antes del alba, aunque juraba no haber salido de casa.',
+    '- Testigos que se sostienen: Abraham vio en el horno a alguien envuelto en un manto quemando papeles y le vio la manga, de tela cara de Aragón color vino (no le vio la cara); Oria de Lescun, la partera, vio a doña Leonor volver a escondidas por el corral, oliendo a quemado, y limpiarse las manos en el pozo (no la vio quemar nada); los dos declararon juntos ante el escribano Íñigo.',
+    '- Inocentes: Gabriel, forastero aragonés y converso (sus libros en hebreo son rezos judíos, no cartas de los asesinos del inquisidor; su ropa no es color vino; su entrada sigue en el cuaderno). Pedro Garcés, hortelano (viste lana parda; su papel de Cortes tiene algo raro, pero eso no tiene que ver con Lope). Abraham, tejedor (viste lana parda; es el que vio la quema). Yusuf, hornero (estaba abriendo la mezquita; su túnica color vino está remendada pero entera). Sancho, borracho (viste lana parda). Alí, Elvira, Miguel, Pascual, Mencía, Diego, Juana, Brahim y el carcelero no tienen nada que ver.',
+    '- Falso: que fuera un robo; que Gabriel fuera uno de los asesinos del inquisidor; que el motivo fuera la huerta de Lope o el agua de riego; que Oria viera la quema; que Abraham viera la cara de quien quemaba.'
+  ].join('\n');
+  var SAMPLE = null, SAMPLE_ESTADO = 'pendiente', ctlTeoria = null;
+  try {
+    if (window.claude && typeof window.claude.use === 'function') {
+      window.claude.use('sample').then(function (s) { SAMPLE = s || null; SAMPLE_ESTADO = s ? 'si' : 'no'; refrescarAviso(); }, function () { SAMPLE_ESTADO = 'no'; refrescarAviso(); });
+    } else { SAMPLE_ESTADO = 'no'; }
+  } catch (e) { SAMPLE_ESTADO = 'no'; }
+  function avisoTeoria() {
+    if (SAMPLE_ESTADO === 'si') return 'El alcalde la lee con tu cuenta de Claude: la primera vez te pedirá permiso. Te dirá qué le convence y qué no, pero no te dará la solución.';
+    if (SAMPLE_ESTADO === 'no') return 'Aquí el alcalde no puede leerla. Tu teoría queda guardada y al final la verás junto a la solución.';
+    return 'Tu teoría queda guardada mientras juegas.';
+  }
+  function refrescarAviso() { var a = $('#aviso-teoria'); if (a) a.textContent = avisoTeoria(); }
+  function leerTeoria() {
+    var t = (S.teoria || '').trim();
+    var aviso = $('#aviso-teoria'), caja = $('#resp-alcalde'), txt = $('#resp-texto'), btn = $('[data-leer]'), parar = $('[data-parar]');
+    if (!aviso || !caja || !txt) return;
+    if (t.length < 20) { aviso.textContent = 'Escribe un poco más: quién fue, por qué y cómo lo sabes.'; return; }
+    if (!SAMPLE) {
+      aviso.textContent = SAMPLE_ESTADO === 'pendiente' ? 'El alcalde todavía no está listo. Prueba otra vez en unos segundos.' : 'Aquí el alcalde no puede leerla. Tu teoría queda guardada y al final la verás junto a la solución.';
+      return;
+    }
+    caja.hidden = false; txt.textContent = 'El alcalde está leyendo tu teoría…';
+    if (btn) btn.disabled = true; if (parar) parar.hidden = false;
+    ctlTeoria = new AbortController();
+    SAMPLE(PROMPT_ALCALDE + '\n\nLA TEORÍA DEL VECINO:\n' + t.slice(0, 4000), { signal: ctlTeoria.signal, onText: function (u) { txt.textContent = u.text; } })
+      .then(function (r) {
+        S.teoriaResp = r.text; guardar(); txt.textContent = r.text;
+        aviso.textContent = 'Cuando lo tengas claro, acusa formalmente aquí abajo.';
+      }, function (e) {
+        var c = e && e.code;
+        if (c === 'cancelled') { txt.textContent = (e && e.text) || S.teoriaResp || ''; caja.hidden = !txt.textContent; return; }
+        if (c === 'not_granted' || c === 'sampling_disabled' || c === 'not_declared' || c === 'capability_disabled' || c === 'capability_removed') {
+          SAMPLE = null; SAMPLE_ESTADO = 'no'; txt.textContent = S.teoriaResp || ''; caja.hidden = !S.teoriaResp;
+          aviso.textContent = 'El alcalde no puede leerla aquí. Tu teoría queda guardada y al final la verás junto a la solución.'; return;
+        }
+        if (c === 'rate_limited') { txt.textContent = (e && e.text) || S.teoriaResp || ''; caja.hidden = !txt.textContent; aviso.textContent = 'El alcalde está ocupado ahora mismo. Prueba otra vez dentro de un rato.'; return; }
+        if (c === 'session_expired') { txt.textContent = S.teoriaResp || ''; caja.hidden = !S.teoriaResp; aviso.textContent = 'Tu sesión de Claude ha caducado. Vuelve a entrar y prueba otra vez.'; return; }
+        if (c === 'refused') { txt.textContent = ''; caja.hidden = true; aviso.textContent = 'El alcalde no ha querido leer eso. Cuéntale tu teoría de otra forma.'; return; }
+        txt.textContent = (e && e.text) || S.teoriaResp || ''; caja.hidden = !txt.textContent;
+        aviso.textContent = 'No se pudo leer tu teoría. Prueba otra vez.';
+      })
+      .then(function () { if (btn) btn.disabled = false; if (parar) parar.hidden = true; ctlTeoria = null; });
+  }
+
+  function htmlAcusar() {
+    var qs = disponibles(PERSONAS), pqs = disponibles(PORQUES), prs = disponibles(PRUEBAS);
+    if (qs.indexOf(S.acus.q) === -1) S.acus.q = '';
+    if (pqs.indexOf(S.acus.pq) === -1) S.acus.pq = '';
+    if (prs.indexOf(S.acus.p1) === -1) S.acus.p1 = '';
+    if (prs.indexOf(S.acus.p2) === -1) S.acus.p2 = '';
+    return '<div class="vista-cab"><p class="kicker">Tu acusación</p><h2>¿Quién mató a Lope?</h2><p class="ayuda">Primero cuéntale al alcalde lo que crees que pasó, con tus palabras. Cuando lo tengas claro, acusa formalmente.</p></div>' +
+      '<section class="paso" aria-labelledby="paso1">' +
+      '<h3 class="paso-t" id="paso1">1 · Tu teoría</h3>' +
+      '<label class="etq-campo" for="teoria">Quién fue, por qué y cómo lo sabes</label>' +
+      '<textarea id="teoria" rows="6" placeholder="Fue… porque… Lo sé porque…">' + esc(S.teoria || '') + '</textarea>' +
+      '<div class="fila"><button class="btn btn-prim" data-leer>Que la lea el alcalde</button><button class="enlace" data-parar hidden>Parar</button></div>' +
+      '<p class="aviso" id="aviso-teoria">' + avisoTeoria() + '</p>' +
+      '<div class="respuesta" id="resp-alcalde"' + (S.teoriaResp ? '' : ' hidden') + ' aria-live="polite"><p class="kicker">El alcalde</p><p id="resp-texto">' + esc(S.teoriaResp || '') + '</p></div>' +
+      '</section>' +
+      '<section class="paso" aria-labelledby="paso2">' +
+      '<h3 class="paso-t" id="paso2">2 · La acusación ante el alcalde</h3>' +
+      '<p class="ayuda">Completa la frase y acusa cuando quieras. Las opciones salen de lo que ya has descubierto: si no ves lo que buscas, sigue investigando.</p>' +
+      '<div class="frase">' +
+      '<select id="a-q" aria-label="Quién">' + opciones(qs, S.acus.q) + '</select>' +
+      '<p class="une">mató a Lope porque</p>' +
+      '<select id="a-pq" aria-label="Por qué">' + opciones(pqs, S.acus.pq) + '</select>' +
+      (pqs.length ? '' : '<p class="falta">Todavía no sabes de ningún motivo.</p>') +
+      '<p class="une">Lo prueban</p>' +
+      '<select id="a-p1" aria-label="Primera prueba">' + opciones(prs, S.acus.p1) + '</select>' +
+      '<p class="une">y</p>' +
+      '<select id="a-p2" aria-label="Segunda prueba">' + opciones(prs, S.acus.p2) + '</select>' +
+      (prs.length < 2 ? '<p class="falta">Todavía no tienes dos pruebas.</p>' : '') +
+      '<button class="btn btn-vino" data-acusar>Acusar ante el alcalde</button>' +
+      '<div id="resultado" aria-live="polite"></div></div></section>';
+  }
+  function cuantasMonedas() {
+    if (S.monedas === 1) return 'Te queda una moneda';
+    return S.monedas > 0 ? 'Te quedan ' + S.monedas + ' monedas' : 'No te quedan monedas';
+  }
+  function monedasHTML() {
+    var hay = S.monedas > 0;
+    return '<span class="monedas" role="img" aria-label="' + cuantasMonedas() + '">' +
+      '<svg class="moneda" viewBox="0 0 20 20" aria-hidden="true">' + (hay ? '<circle cx="10" cy="10" r="8" class="m-llena"/><circle cx="10" cy="10" r="4.2" class="m-anillo"/>' : '<circle cx="10" cy="10" r="8" class="m-vacia"/>') + '</svg>' +
+      '<span class="m-num">' + S.monedas + '</span><span class="m-txt">' + (S.monedas === 1 ? 'moneda' : 'monedas') + '</span></span>';
+  }
+
+  /* ---------- Hoja de papel ---------- */
+  /* Lo que se ve: ya no hay imágenes aparte (en pausa desde el 30 de septiembre): su texto sale tal cual. */
+  function imagenHTML(h) {
+    var extra = '';
+    if (h.extra === 'tela') extra = '<div class="tela" role="img" aria-label="Trozo de tela color vino"></div>';
+    if (h.extra === 'signo') extra = SIGNO + '<p class="img-cap">Signo de Íñigo, escribano de Tudela</p>';
+    if (h.extra === 'signo2') extra = SIGNO_CORTES + '<p class="img-cap">Signo de Martín Pérez, escribano de Cortes</p>';
+    if (h.foto) return '<figure class="img-hoja foto-pj"><div class="zoom foto-zoom" data-zoom="pj|' + h.foto + '" data-max="' + MAX_PJ + '" style="aspect-ratio:' + PJ_W + '/' + PJ_H + ';--ar:' + (PJ_W / PJ_H).toFixed(4) + '"><div class="capa"><img src="' + h.foto + '.webp" alt="Retrato de ' + esc(h.titulo) + '" width="' + PJ_W + '" height="' + PJ_H + '" decoding="async" draggable="false"></div></div>' + (MAX_PJ > 1 ? controlesZoom(MAX_PJ) : '') + '</figure>';
+    var d = h.imagen && h.imagen.d ? '<p class="lo-que-ves">' + h.imagen.d + '</p>' : '';
+    if (!d && !extra) return '';
+    return '<div class="ves">' + d + extra + '</div>';
+  }
+  function mostrarHoja(h) {
+    hojaActual = h;
+    var html = '';
+    if (modoPrueba && h.pista) {
+      var tp = h.pista.replace(/^Se deduce: /, '');
+      tp = tp.charAt(0).toUpperCase() + tp.slice(1);
+      html += '<div class="pista' + (h.deduce ? ' deduce' : '') + '"><span class="pista-etq">' + (h.deduce ? 'Se deduce' : 'Se da') + ' · modo prueba</span><span>' + tp + '</span></div>';
+    }
+    if (h.kicker) html += '<p class="kicker">' + h.kicker + '</p>';
+    html += '<h3 id="hoja-tit">' + h.titulo + '</h3>';
+    var img = imagenHTML(h);
+    var cuerpo = (h.p && h.p.length) ? '<div class="cuerpo">' + h.p.map(function (x) { return '<p>' + x + '</p>'; }).join('') + '</div>' : '';
+    html += h.imagenAbajo ? cuerpo + img : img + cuerpo;
+    if (h.html) html += '<div class="cuerpo libreta">' + h.html + '</div>';
+    if (h.glosa) html += '<p class="glosa">' + h.glosa + '</p>';
+    if (h.nota) html += '<p class="glosa">' + h.nota + '</p>';
+    if (h.antes && h.antes.length) html += '<details class="antes"><summary>Lo que te dijo antes</summary><div class="libreta">' + h.antes.map(entradaHTML).join('') + '</div></details>';
+    var acc = h.acciones || [];
+    if (h.decide && acc.length) html += '<p class="decide">Decides tú</p><p class="decide-nota">Lo que escojas aquí cambia lo que pase después, y no se puede deshacer.</p>';
+    html += '<div class="acciones">' + acc.map(function (a, i) {
+      return '<button class="btn ' + (a.clase || 'btn-prim') + '" data-acc="' + i + '">' + a.t + '</button>';
+    }).join('') + '<button class="btn" data-cerrar>' + (h.cerrarTxt || 'Cerrar') + '</button></div>';
+    if (h.novedades && h.novedades.length) html += '<div class="novedades">' + h.novedades.map(function (n) { return '<p>' + n + '</p>'; }).join('') + '</div>';
+    var hoja = $('#hoja');
+    hoja.innerHTML = html;
+    $('#velo').hidden = false;
+    hoja.scrollTop = 0;
+    prepararZoom(hoja);
+    try { hoja.focus({ preventScroll: true }); } catch (e) { hoja.focus(); }
+    actualizarFlecha();
+  }
+  function cerrarHoja() { $('#velo').hidden = true; hojaActual = null; actualizarFlecha(); }
+
+  var tToast = null;
+  function toast(t) {
+    var el = $('#toast');
+    el.textContent = t;
+    el.classList.add('ver');
+    clearTimeout(tToast);
+    tToast = setTimeout(function () { el.classList.remove('ver'); }, 2600);
+  }
+
+  var enEjecutar = false;
+  function ejecutar(fn, quien) {
+    avisos = [];
+    var h = fn();
+    if (h && !h.quien && quien) h.quien = quien;
+    if (h && h.quien && !h.nolog) registrar(h, h.quien);
+    guardar();
+    enEjecutar = true;
+    if (fase === 'juego') renderJuego();
+    enEjecutar = false;
+    avisos = avisos.filter(function (a, i) { return avisos.indexOf(a) === i; });
+    if (h) { h.novedades = avisos.slice(); mostrarHoja(h); }
+    else { cerrarHoja(); if (avisos.length) toast(avisos.join('\n')); }
+    avisos = [];
+  }
+
+  /* ---------- La flecha del plano: avisa de un sitio nuevo que queda más abajo ---------- */
+  var flechaDestino = null, rafFlecha = 0;
+  function actualizarFlecha() {
+    var f = $('#flecha');
+    if (!f) return;
+    if (fase !== 'juego' || vista !== 'plano' || !$('#velo').hidden) { f.hidden = true; flechaDestino = null; return; }
+    var limite = window.innerHeight - 96, destino = null, arriba = Infinity;
+    Array.prototype.forEach.call(document.querySelectorAll('.plano .marca.nueva'), function (m) {
+      var r = m.getBoundingClientRect();
+      if (r.top > limite && r.top < arriba) { arriba = r.top; destino = m; }
+    });
+    flechaDestino = destino;
+    f.hidden = !destino;
+    if (!destino) return;
+    /* Dónde poner la flecha: donde no tape ningún sitio del plano. Se miden por separado el punto y el rótulo de cada sitio.
+       Si en el móvil no hay hueco libre, se queda donde menos tape (nunca encima de un punto si se puede evitar). */
+    /* Tapar un sitio abierto es lo peor; el rótulo de un sitio cerrado, con candado, casi no importa. */
+    var cajas = [];
+    Array.prototype.forEach.call(document.querySelectorAll('.plano .marca'), function (m) {
+      var cerrada = m.classList.contains('cerrada');
+      var t = m.querySelector('.toque'), x = m.querySelector('text');
+      if (t) cajas.push({ r: t.getBoundingClientRect(), fijo: cerrada ? 2000 : 100000, area: 0 });
+      if (x) cajas.push({ r: x.getBoundingClientRect(), fijo: 0, area: cerrada ? 0.2 : 1 });
+    });
+    var dr = destino.querySelector('.toque').getBoundingClientRect();
+    var xDestino = Math.round((dr.left + dr.right) / 2);
+    function solape(r, fr) {
+      var w = Math.min(r.right, fr.right + 6) - Math.max(r.left, fr.left - 6);
+      var h = Math.min(r.bottom, fr.bottom + 6) - Math.max(r.top, fr.top - 6);
+      return (w > 0 && h > 0) ? w * h : 0;
+    }
+    function poner(s) {
+      f.classList.toggle('redonda', s[0] === 'redonda');
+      f.setAttribute('data-pos', s[1]);
+      f.setAttribute('data-alto', s[2]);
+      f.style.left = s[1] === 'sobre' ? Math.min(Math.max(xDestino, 40), window.innerWidth - 40) + 'px' : '';
+    }
+    var mejor = null, menos = Infinity;
+    for (var i = 0; i < SITIOS_FLECHA.length; i++) {
+      poner(SITIOS_FLECHA[i]);
+      var fr = f.getBoundingClientRect(), nota = 0;
+      if (fr.left < 8 || fr.right > window.innerWidth - 8) continue;
+      cajas.forEach(function (c) { var a = solape(c.r, fr); if (a) nota += c.fijo + a * c.area; });
+      if (nota === 0) return;
+      if (nota < menos) { menos = nota; mejor = SITIOS_FLECHA[i]; }
+    }
+    poner(mejor || ['redonda', 'centro', '0']);
+  }
+  var SITIOS_FLECHA = [];
+  ['', 'redonda'].forEach(function (forma) {
+    ['0', '1'].forEach(function (alto) {
+      (forma ? ['sobre', 'centro', 'dcha', 'izda', 'borde-d', 'borde-i'] : ['centro', 'dcha', 'izda', 'fuera-d', 'borde-d', 'borde-i']).forEach(function (pos) { SITIOS_FLECHA.push([forma, pos, alto]); });
+    });
+  });
+  function pedirFlecha() {
+    if (rafFlecha) return;
+    rafFlecha = (window.requestAnimationFrame || function (cb) { return setTimeout(cb, 16); })(function () { rafFlecha = 0; actualizarFlecha(); });
+  }
+  window.addEventListener('scroll', pedirFlecha, { passive: true });
+  window.addEventListener('resize', pedirFlecha);
+  function irAFlecha() {
+    if (!flechaDestino) return;
+    var quieto = false;
+    try { quieto = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
+    try { flechaDestino.scrollIntoView({ behavior: quieto ? 'auto' : 'smooth', block: 'center' }); } catch (e) { flechaDestino.scrollIntoView(); }
+    setTimeout(actualizarFlecha, 600);
+  }
+
+  /* ---------- Zoom de las imágenes: dos dedos, doble toque, rueda con Ctrl o botones ----------
+     Cada imagen se acerca como mucho hasta data-max (lo que aguanta su resolución).
+     Lo acercado se mantiene mientras sigues en el sitio (al abrir y cerrar una hoja); al volver a entrar, la imagen sale entera. */
+  var MAX_PJ = 1.5;
+  var ZST = {};
+  function veces(x) { return '×' + String(Math.round(x * 10) / 10).replace('.', ','); }
+  function notaZoom(s, max) { return s >= max - 0.01 ? 'Al máximo (' + veces(max) + ')' : s > 1 ? 'Acercada ' + veces(s) + ' de ' + veces(max) : 'Acerca con dos dedos (hasta ' + veces(max) + ')'; }
+  function controlesZoom(max) {
+    return '<div class="zoom-barra"><span class="zoom-nota" aria-live="polite">' + notaZoom(1, max) + '</span><div class="zoom-ctl"><button type="button" class="z-entera" data-z="0" aria-label="Ver la imagen entera" hidden>Entera</button><button type="button" data-z="-1" aria-label="Alejar la imagen" disabled>−</button><button type="button" data-z="1" aria-label="Acercar la imagen">+</button></div></div>';
+  }
+  function zMax(box) { return Math.max(1, parseFloat(box.getAttribute('data-max')) || 1); }
+  function zEstado(box) { var k = box.getAttribute('data-zoom'); return ZST[k] || (ZST[k] = { s: 1, fx: 0, fy: 0 }); }
+  function zPintar(box, st) {
+    var W = box.clientWidth, H = box.clientHeight, max = zMax(box);
+    st.s = Math.min(max, Math.max(1, st.s));
+    if (st.s < 1.001) { st.s = 1; st.fx = 0; st.fy = 0; }
+    st.fx = Math.min(0, Math.max(1 - st.s, st.fx));
+    st.fy = Math.min(0, Math.max(1 - st.s, st.fy));
+    var capa = box.querySelector('.capa');
+    if (capa) capa.style.transform = st.s === 1 ? '' : 'translate(' + (st.fx * W).toFixed(2) + 'px,' + (st.fy * H).toFixed(2) + 'px) scale(' + st.s.toFixed(4) + ')';
+    box.style.setProperty('--inv', (1 / st.s).toFixed(4));
+    box.classList.toggle('ampliada', st.s > 1);
+    var fig = box.closest('figure') || box.parentNode;
+    var mas = fig.querySelector('[data-z="1"]'), menos = fig.querySelector('[data-z="-1"]'), entera = fig.querySelector('[data-z="0"]'), nota = fig.querySelector('.zoom-nota');
+    if (mas) mas.disabled = st.s >= max - 0.001;
+    if (menos) menos.disabled = st.s <= 1;
+    if (entera) entera.hidden = st.s <= 1;
+    if (nota) { var t = notaZoom(st.s, max); if (nota.textContent !== t) nota.textContent = t; }
+  }
+  /* Acerca o aleja manteniendo quieto el punto (cx, cy) de la caja. */
+  function zA(box, s, cx, cy) {
+    var st = zEstado(box), W = box.clientWidth, H = box.clientHeight;
+    var max = zMax(box), ns = Math.min(max, Math.max(1, s));
+    var lx = (cx - st.fx * W) / st.s, ly = (cy - st.fy * H) / st.s;
+    st.fx = (cx - lx * ns) / W; st.fy = (cy - ly * ns) / H; st.s = ns;
+    zPintar(box, st);
+  }
+  function prepararZoom(raiz) {
+    Array.prototype.forEach.call((raiz || document).querySelectorAll('.zoom'), function (box) {
+      box.classList.add('gesto'); zPintar(box, zEstado(box)); void box.offsetWidth;
+      (window.requestAnimationFrame || setTimeout)(function () { box.classList.remove('gesto'); });
+    });
+  }
+  window.addEventListener('resize', function () { prepararZoom(document); });
+
+  var zG = null, zToques = {}, zUltimoToque = null, zSuprimir = 0;
+  function zPunto(box, e) { var r = box.getBoundingClientRect(); return { x: e.clientX - r.left, y: e.clientY - r.top }; }
+  function zEmpezar(box) {
+    var ids = Object.keys(zToques), st = zEstado(box), W = box.clientWidth, H = box.clientHeight;
+    if (ids.length >= 2) {
+      var a = zToques[ids[0]], b = zToques[ids[1]];
+      var m = { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 };
+      zG = { box: box, tipo: 'pellizco', d0: Math.max(10, Math.hypot(a.x - b.x, a.y - b.y)), s0: st.s, lx: (m.x - st.fx * W) / st.s, ly: (m.y - st.fy * H) / st.s, movido: true };
+      box.classList.add('gesto');
+    } else if (ids.length === 1) {
+      var p = zToques[ids[0]];
+      zG = { box: box, tipo: 'mover', x0: p.x, y0: p.y, fx0: st.fx, fy0: st.fy, movido: zG ? zG.movido : false, inicio: p };
+      if (st.s > 1) box.classList.add('gesto');
+    } else zG = null;
+  }
+  document.addEventListener('pointerdown', function (e) {
+    var box = e.target.closest && e.target.closest('.zoom');
+    if (!box || e.target.closest('.zoom-ctl')) return;
+    if (e.pointerType === 'mouse' && e.button !== 0) return;
+    if (zG && zG.box !== box) { zToques = {}; zG = null; }
+    zToques[e.pointerId] = zPunto(box, e);
+    if (zG && zG.tipo === 'mover' && Object.keys(zToques).length === 1) return;
+    zEmpezar(box);
+    if (zG && zG.tipo === 'mover') zG.t0 = Date.now();
+  });
+  window.addEventListener('pointermove', function (e) {
+    if (!zG || !zToques[e.pointerId]) return;
+    var box = zG.box, st = zEstado(box), W = box.clientWidth, H = box.clientHeight;
+    zToques[e.pointerId] = zPunto(box, e);
+    if (zG.tipo === 'pellizco') {
+      var ids = Object.keys(zToques); if (ids.length < 2) return;
+      var a = zToques[ids[0]], b = zToques[ids[1]];
+      var m = { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 };
+      var ns = Math.min(zMax(box), Math.max(1, zG.s0 * Math.hypot(a.x - b.x, a.y - b.y) / zG.d0));
+      st.s = ns; st.fx = (m.x - zG.lx * ns) / W; st.fy = (m.y - zG.ly * ns) / H;
+      zPintar(box, st);
+      if (e.cancelable) e.preventDefault();
+    } else {
+      var p = zToques[e.pointerId];
+      if (Math.abs(p.x - zG.x0) > 6 || Math.abs(p.y - zG.y0) > 6) zG.movido = true;
+      if (st.s > 1) {
+        st.fx = zG.fx0 + (p.x - zG.x0) / W; st.fy = zG.fy0 + (p.y - zG.y0) / H;
+        zPintar(box, st);
+        if (e.cancelable) e.preventDefault();
+      }
+    }
+  }, { passive: false });
+  function zSoltar(e, cancelado) {
+    if (!zG || !zToques[e.pointerId]) return;
+    var box = zG.box, g = zG, p = zToques[e.pointerId];
+    delete zToques[e.pointerId];
+    if (g.movido) zSuprimir = Date.now();
+    if (Object.keys(zToques).length) { zEmpezar(box); zG.movido = true; return; }
+    box.classList.remove('gesto');
+    zG = null;
+    if (cancelado || g.movido || g.tipo !== 'mover') return;
+    /* Doble toque: acerca al máximo donde tocaste, o vuelve a la imagen entera. */
+    if (e.target.closest && e.target.closest('.punto')) { zUltimoToque = null; return; }
+    var ahora = Date.now();
+    if (zUltimoToque && zUltimoToque.box === box && ahora - zUltimoToque.t < 320 && Math.hypot(p.x - zUltimoToque.x, p.y - zUltimoToque.y) < 30) {
+      var st = zEstado(box);
+      if (st.s > 1.01) { st.s = 1; zPintar(box, st); } else zA(box, zMax(box), p.x, p.y);
+      zUltimoToque = null;
+    } else zUltimoToque = { box: box, t: ahora, x: p.x, y: p.y };
+  }
+  window.addEventListener('pointerup', function (e) { zSoltar(e, false); });
+  window.addEventListener('pointercancel', function (e) { zSoltar(e, true); });
+  /* Si arrastraste la imagen, el toque no abre el punto que quedó debajo. */
+  document.addEventListener('click', function (e) {
+    if (zSuprimir && Date.now() - zSuprimir < 450 && e.target.closest && e.target.closest('.zoom') && !e.target.closest('.zoom-ctl')) { e.stopPropagation(); e.preventDefault(); }
+    zSuprimir = 0;
+  }, true);
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest && e.target.closest('.zoom-ctl [data-z]');
+    if (!b) return;
+    var box = b.closest('figure').querySelector('.zoom'), st = zEstado(box), z = +b.getAttribute('data-z');
+    var cx = box.clientWidth / 2, cy = box.clientHeight / 2;
+    if (z === 0) { st.s = 1; zPintar(box, st); }
+    else zA(box, z > 0 ? Math.min(zMax(box), st.s * 1.5) : st.s / 1.5, cx, cy);
+  });
+  /* En el ordenador: pellizco del panel táctil (llega como rueda con Ctrl). */
+  document.addEventListener('wheel', function (e) {
+    if (!e.ctrlKey) return;
+    var box = e.target.closest && e.target.closest('.zoom');
+    if (!box) return;
+    e.preventDefault();
+    var p = zPunto(box, e);
+    box.classList.add('gesto');
+    zA(box, zEstado(box).s * Math.exp(-e.deltaY * 0.01), p.x, p.y);
+    clearTimeout(box._tg); box._tg = setTimeout(function () { box.classList.remove('gesto'); }, 150);
+  }, { passive: false });
+  /* Safari en iPhone: que el pellizco no amplíe toda la página. */
+  ['gesturestart', 'gesturechange'].forEach(function (t) {
+    document.addEventListener(t, function (e) { if (e.target.closest && e.target.closest('.zoom')) e.preventDefault(); }, { passive: false });
+  });
+
+  /* ---------- Acciones del juego ---------- */
+  function irSitio(id) {
+    Object.keys(ZST).forEach(function (k) { if (k.indexOf(id + '|') === 0) delete ZST[k]; });
+    sitio = id; vista = 'sitio';
+    if (S.entrados.indexOf(id) === -1) S.entrados.push(id);
+    guardar(); renderJuego(); window.scrollTo(0, 0);
+  }
+  function entrar(id) {
+    var L = LUGAR[id];
+    if (S.visibles.indexOf(id) === -1) { toast('Todavía no tienes motivo para ir ahí.\nSe abrirá cuando alguien te nombre este sitio.'); return; }
+    if (L.costo && S.pagados.indexOf(id) === -1) {
+      mostrarHoja({
+        kicker: 'Para entrar', titulo: L.puertaTit || L.nombre,
+        p: L.puerta,
+        acciones: S.monedas > 0 ? [{ t: L.pagarTxt, fn: function () { S.monedas--; S.pagados.push(id); if (L.trasPagar) return L.trasPagar(); irSitio(id); return null; } }] : [],
+        nota: cuantasMonedas() + '.',
+        cerrarTxt: 'Todavía no'
+      });
+      return;
+    }
+    irSitio(id);
+  }
+  function tocarPunto(pid) {
+    var L = LUGAR[sitio];
+    var p = L.puntos.filter(function (x) { return x.id === pid; })[0];
+    if (!p) return;
+    var clave = sitio + ':' + pid;
+    if (S.vistos.indexOf(clave) === -1) S.vistos.push(clave);
+    var previas = p.t ? convDe(p.t).slice() : [];
+    ejecutar(function () {
+      var h = p.abrir();
+      if (h && p.t) {
+        if (!h.quien) h.quien = p.t;
+        var txt = (h.p || []).join('\n');
+        var antes = previas.filter(function (e) { return e.p.join('\n') !== txt; });
+        if (antes.length) h.antes = antes;
+      }
+      return h;
+    });
+  }
+  function verObjeto(id) {
+    var O = OBJETOS[id];
+    mostrarHoja({ kicker: O.tipo, titulo: tituloObj(id), imagen: O.img ? { tipo: (id === 'manga' ? 'completa' : 'aparte'), d: O.img } : null, p: O.x ? [O.x] : [], extra: O.extra || null, pista: O.pista, deduce: !!O.deduce });
+  }
+  function verFoto(id) {
+    var P = PJ[id];
+    if (!P || !FOTO_PJ[id]) return;
+    delete ZST['pj|' + FOTO_PJ[id]];
+    mostrarHoja({ kicker: 'Personaje', titulo: P.n, foto: FOTO_PJ[id], p: [P.rol] });
+  }
+  function verTestigo(p) {
+    var l = convDe(p);
+    mostrarHoja({ kicker: 'Testimonio', titulo: TESTIGOS[p].n, html: l.length ? l.map(entradaHTML).join('') : '<p>Todavía no te ha dicho nada.</p>' });
+  }
+  function probarSalida() {
+    var v = ($('#resp-salida').value || '').trim().toLowerCase();
+    if (v === 'prueba') { S.oriaAbierta = true; guardar(); renderJuego(); toast('Encontraste la casa de Oria de Lescun'); }
+    else { $('#err-salida').hidden = false; }
+  }
+  function acusar() {
+    var q = S.acus.q, pq = S.acus.pq, p1 = S.acus.p1, p2 = S.acus.p2;
+    var r = $('#resultado');
+    if (!q || !pq || !p1 || !p2) { r.innerHTML = '<div class="resultado">Completa los cuatro huecos.</div>'; return; }
+    if (p1 === p2) { r.innerHTML = '<div class="resultado">Escoge dos pruebas distintas.</div>'; return; }
+    if (q !== QUIEN_OK) { r.innerHTML = '<div class="resultado no"><strong>No.</strong> El alcalde no te cree. «Vuelve cuando tengas algo mejor.»</div>'; return; }
+    function casi(t) { r.innerHTML = '<div class="resultado casi"><strong>Casi.</strong> ' + t + '</div>'; }
+    if (pq !== PORQUE_OK) { casi('El alcalde duda: ¿por qué una jurado de la ciudad iba a matar al guarda del peaje? Revisa el motivo.'); return; }
+    var ps = [p1, p2];
+    var fis = ps.filter(function (x) { return FISICAS_OK.indexOf(x) !== -1; }).length;
+    var tes = ps.filter(testimonioValido).length;
+    if (fis >= 1 && tes >= 1) { S.resuelto = true; guardar(); fase = 'final'; render(); window.scrollTo(0, 0); return; }
+    if (ps.indexOf(DESLIZ) !== -1 && tes === 0) { casi('El alcalde duda: que doña Leonor supiera lo de las hojas es muy raro, pero es tu palabra contra la de una jurado. Hace falta alguien que declare.'); return; }
+    if (fis === 2) { casi('El alcalde duda. Doña Leonor se sienta a su lado en el concejo, y contra alguien así las cosas solas no bastan. Hace falta alguien que declare.'); return; }
+    if (tes >= 1) { casi('El alcalde duda: son palabras contra una jurado de la ciudad. Tráele algo que se pueda tocar.'); return; }
+    if (ps.indexOf('lo que contó Oria de Lescun') !== -1) { casi('El alcalde duda: Oria de Lescun no ha aceptado declarar, y sin eso su palabra no vale.'); return; }
+    casi('El alcalde duda: algo de lo que dices no cuadra. Revisa tus pruebas.');
+  }
+
+  /* ---------- Pantallas ---------- */
+  var INTRO = [
+    'Hace tres semanas, en la catedral de Zaragoza, ocho hombres acuchillaron a Pedro Arbués mientras rezaba de rodillas ante el altar mayor. Era el inquisidor: el hombre al que la Iglesia había encargado perseguir a los conversos, esos judíos bautizados de los que se sospecha que, puertas adentro, siguen rezando como antes.',
+    'Los asesinos corrieron a esconderse en Tudela. No les sirvió de nada: los atraparon igual. Pero desde entonces no dejan de llegar conversos de Zaragoza, huyendo de la cacería. Se juegan el cuello en cada puente y en cada posada, y el que se juega el cuello a diario acaba perdiéndole el miedo a la muerte. A la suya y a la de los demás.',
+    'Esta mañana, 7 de octubre, un barquero ha encontrado un muerto en el río, enganchado bajo el puente de piedra.'
+  ];
+  var GLOSA_MONEDAS = 'Las monedas abren puertas. Respuestas, ninguna.';
+  function parrafosGabriel() {
+    var tarea = TAREA[S.oficio] || 'por tu trabajo';
+    return ['Hace cuatro días alquilaste un cuarto a un forastero de Aragón. Dice que se llama Gabriel. Te ha pagado tres monedas ' + tarea + '.',
+      'Bajo el polvo del camino lleva ropa cara, de la buena. Y esas manos no han trabajado en su vida.'];
+  }
+  function hojaComienzo() {
+    var yo = S.nombre ? esc(S.nombre) + (S.oficio ? ', ' + S.oficio : '') : '';
+    return { kicker: 'Para releer', titulo: 'Lo que sabías al empezar', p: INTRO.concat(parrafosGabriel()), glosa: GLOSA_MONEDAS, nota: yo ? 'Eres ' + yo + '.' : '' };
+  }
+  function textoGabriel() {
+    return parrafosGabriel().map(function (x) { return '<p>' + x + '</p>'; }).join('') + '<p class="glosa">' + GLOSA_MONEDAS + '</p>';
+  }
+  function renderMenu() {
+    var a = '';
+    if (!S.empezado) {
+      a = '<button class="btn btn-prim" data-accion="empezar">Empezar</button>';
+    } else {
+      a = '<button class="btn btn-prim" data-accion="seguir">' + (S.resuelto ? 'Volver al plano' : 'Seguir') + '</button>';
+      if (S.resuelto) a += '<button class="btn" data-accion="ver-final">Ver el final</button>';
+      a += '<button class="enlace" data-accion="pedir-borrar">Empezar de nuevo</button>';
+    }
+    $('#caso1-acciones').innerHTML = a;
+    var total = S.objetos.length + S.ordenT.length;
+    $('#caso1-estado').innerHTML = S.resuelto ? '<span class="chip chip-ok">Resuelto</span>' : (S.empezado ? '<span class="chip">' + total + ' archivos</span>' : '');
+    $('#modo-prueba').checked = modoPrueba;
+  }
+  function renderIntro2() {
+    var n = $('#nombre');
+    if (document.activeElement !== n) n.value = S.nombre;
+    document.querySelectorAll('input[name=oficio]').forEach(function (r) { r.checked = (r.value === S.oficio); });
+    $('#texto-gabriel').innerHTML = textoGabriel();
+  }
+  function renderJuego() { revisarEventos(); pintarJuego(); }
+  function pintarJuego() {
+    $('#monedas').innerHTML = monedasHTML();
+    var c = $('#contenido');
+    if (vista === 'sitio' && sitio) c.innerHTML = htmlSitio();
+    else if (vista === 'personajes') { c.innerHTML = htmlPersonajes(); if (S.pjNuevos.length) { S.pjNuevos = []; guardar(); } }
+    else if (vista === 'archivos') c.innerHTML = htmlArchivos();
+    else if (vista === 'acusar') c.innerHTML = htmlAcusar();
+    else { vista = 'plano'; c.innerHTML = htmlPlano(); }
+    prepararZoom(c);
+    document.querySelectorAll('.tab').forEach(function (t) {
+      var activa = t.getAttribute('data-tab') === vista || (t.getAttribute('data-tab') === 'plano' && vista === 'sitio');
+      if (activa) t.setAttribute('aria-current', 'page'); else t.removeAttribute('aria-current');
+    });
+    var b = $('#badge-arch');
+    var total = S.objetos.length + S.ordenT.length;
+    b.textContent = total;
+    b.hidden = total === 0;
+    var bp = $('#badge-pj');
+    bp.textContent = S.pjNuevos.length;
+    bp.hidden = S.pjNuevos.length === 0;
+    actualizarFlecha();
+  }
+  function render() {
+    ['menu', 'intro1', 'intro2', 'juego', 'final'].forEach(function (f) { $('#s-' + f).hidden = (f !== fase); });
+    $('#pestanas').hidden = fase !== 'juego';
+    $('#app').classList.toggle('con-barra', fase === 'juego');
+    if (fase === 'menu') renderMenu();
+    if (fase === 'intro1') $('#intro1-texto').innerHTML = INTRO.map(function (x) { return '<p>' + x + '</p>'; }).join('');
+    if (fase === 'intro2') renderIntro2();
+    if (fase === 'juego') renderJuego();
+    if (fase === 'final') {
+      var ft = $('#final-teoria');
+      if (ft) ft.innerHTML = (S.teoria && S.teoria.trim()) ? '<h2>Tu teoría</h2><p class="teoria-final">' + esc(S.teoria.trim()).replace(/\n/g, '<br>') + '</p>' : '';
+    }
+    actualizarFlecha();
+  }
+  function accion(a) {
+    if (a === 'empezar') { fase = 'intro1'; }
+    else if (a === 'intro-seguir') { fase = 'intro2'; }
+    else if (a === 'salir') { S.empezado = true; guardar(); fase = 'juego'; vista = 'plano'; }
+    else if (a === 'seguir') { fase = 'juego'; if (vista === 'sitio' && !sitio) vista = 'plano'; }
+    else if (a === 'ver-final') { fase = 'final'; }
+    else if (a === 'menu') { fase = 'menu'; cerrarHoja(); }
+    else if (a === 'pedir-borrar') { $('#confirmar-borrar').hidden = false; return; }
+    else if (a === 'no-borrar') { $('#confirmar-borrar').hidden = true; return; }
+    else if (a === 'borrar') { S = inicial(); guardar(); vista = 'plano'; sitio = null; $('#confirmar-borrar').hidden = true; render(); toast('Avance borrado'); return; }
+    render();
+    window.scrollTo(0, 0);
+  }
+
+  /* ---------- Eventos ---------- */
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest('[data-accion],[data-tab],[data-lugar],[data-punto],[data-obj],[data-testigo],[data-acc],[data-cerrar],[data-abrir-oria],[data-acusar],[data-comienzo],[data-leer],[data-parar],[data-flecha],[data-foto]');
+    if (!el) { if (e.target === $('#velo')) cerrarHoja(); return; }
+    if (el.hasAttribute('data-cerrar')) { cerrarHoja(); return; }
+    if (el.hasAttribute('data-comienzo')) { mostrarHoja(hojaComienzo()); return; }
+    if (el.hasAttribute('data-acc')) {
+      var a = hojaActual && hojaActual.acciones && hojaActual.acciones[+el.getAttribute('data-acc')];
+      if (a) ejecutar(a.fn, hojaActual && hojaActual.quien);
+      return;
+    }
+    if (el.hasAttribute('data-flecha')) { irAFlecha(); return; }
+    if (el.hasAttribute('data-foto')) { verFoto(el.getAttribute('data-foto')); return; }
+    if (el.hasAttribute('data-leer')) { leerTeoria(); return; }
+    if (el.hasAttribute('data-parar')) { if (ctlTeoria) ctlTeoria.abort(); return; }
+    if (el.hasAttribute('data-accion')) { accion(el.getAttribute('data-accion')); return; }
+    if (el.hasAttribute('data-tab')) { vista = el.getAttribute('data-tab'); renderJuego(); window.scrollTo(0, 0); return; }
+    if (el.hasAttribute('data-lugar')) { entrar(el.getAttribute('data-lugar')); return; }
+    if (el.hasAttribute('data-punto')) { tocarPunto(el.getAttribute('data-punto')); return; }
+    if (el.hasAttribute('data-obj')) { verObjeto(el.getAttribute('data-obj')); return; }
+    if (el.hasAttribute('data-testigo')) { verTestigo(el.getAttribute('data-testigo')); return; }
+    if (el.hasAttribute('data-abrir-oria')) { probarSalida(); return; }
+    if (el.hasAttribute('data-acusar')) { acusar(); return; }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !$('#velo').hidden) { cerrarHoja(); return; }
+    var t = e.target;
+    if (t && t.closest && (e.key === 'Enter' || e.key === ' ')) {
+      var m = t.closest('g[data-lugar]');
+      if (m) { e.preventDefault(); entrar(m.getAttribute('data-lugar')); return; }
+    }
+    if (t && t.id === 'resp-salida' && e.key === 'Enter') { e.preventDefault(); probarSalida(); }
+  });
+  document.addEventListener('change', function (e) {
+    var t = e.target;
+    if (t.id === 'modo-prueba') { modoPrueba = t.checked; guardarModo(); return; }
+    if (t.name === 'oficio') { S.oficio = t.value; guardar(); $('#texto-gabriel').innerHTML = textoGabriel(); }
+    var mapa = { 'a-q': 'q', 'a-pq': 'pq', 'a-p1': 'p1', 'a-p2': 'p2' };
+    if (mapa[t.id]) { S.acus[mapa[t.id]] = t.value; guardar(); }
+  });
+  document.addEventListener('input', function (e) {
+    if (e.target.id === 'nombre') { S.nombre = e.target.value.trim(); guardar(); }
+    if (e.target.id === 'teoria') { S.teoria = e.target.value; guardar(); }
+    if (e.target.id === 'resp-salida') { var er = $('#err-salida'); if (er) er.hidden = true; }
+  });
+
+  render();
+})();
+</script>
+
+</body></html>
